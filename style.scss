@@ -10,7 +10,7 @@
 // variables
 $lime: #65F3AC;
 $grey: #E2E2E2;
-$text:#A2A4A3;
+$text: #A2A4A3;
 $primary: #25262A;
 
 nav {
@@ -60,7 +60,7 @@ nav {
     }
 }
 
-.btn{
+.btn {
     background: $lime;
     border: none;
     padding: 15px 60px 15px 30px;
@@ -69,43 +69,147 @@ nav {
     font-weight: 600;
 }
 
+// .banner {
+//     height: 100vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: flex-start;
+//     flex-direction: column;
+//     font-family: 'Montserrat';
+//     background: $primary;
+
+//     .content {
+//         display: flex;
+//         justify-content: space-evenly;
+//         align-items: flex-start;
+//         flex-direction: column;
+//         gap: 20px;
+//         padding-left: 114px;
+
+//         .banner-title {
+//             font-weight: 700;
+//             font-size: 40px;
+//             line-height: 65px;
+
+//             h2 {
+//                 color: $grey;
+//             }
+
+//             h1 {
+//                 color: $lime;
+//             }
+//         }
+
+//         p {
+//             width: 70%;
+//             font-weight: 500;
+//             font-size: 18px;
+//             line-height: 35px;
+//             color: $text;
+//         }
+//     }
+// }
+
 .banner {
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+    position: relative;
     font-family: 'Montserrat';
     background: $primary;
 
-    .content {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 20px;
-        padding-left: 114px;
+    .grid-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        position: absolute;
+        display: grid;
+        max-height: max-content;
+        grid-template-columns: 50% 50%;
 
-        .banner-title {
-            font-weight: 700;
-            font-size: 40px;
-            line-height: 65px;
+        .content {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 20px;
+            padding-left: 114px;
 
-            h2 {
-                color: $grey;
+            .banner-title {
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 65px;
+
+                h2 {
+                    color: $grey;
+                }
+
+                h1 {
+                    color: $lime;
+                }
             }
 
-            h1 {
-                color: $lime;
+            p {
+                width: 70%;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 35px;
+                color: $text;
             }
         }
+    }
+}
 
-        p {
-            width: 70%;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 35px;
-            color: $text;
+// Scroll button
+.scroll {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+
+    a#scroll-btn {
+        width: 22px;
+        height: 44px;
+        border: 1px solid #51555E;
+        background: #51555E;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 2.25em;
+        text-align: center;
+        border-radius: 3em;
+    }
+
+    a#scroll-btn:before {
+        position: absolute;
+        content: "";
+        margin: auto;
+        left: 0;
+        right: 0;
+        bottom: 1.25em;
+        height: 1.2em;
+        width: 1.2em;
+        background-color: $lime;
+        border-radius: 50%;
+        animation: move-down 2s infinite;
+    }
+
+    @keyframes move-down {
+        80% {
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translateY(1.3em);
+            opacity: 0;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .grid-container {
+        .banner-image{
+            display: none;
         }
     }
 }
