@@ -150,13 +150,13 @@ nav {
         position: absolute;
         content: "";
         margin: auto;
-        left: 0;
-        right: 0;
+        left: 0px;
+        right: 4.5px;
         bottom: 1.25em;
         height: 1.2em;
         width: 1.2em;
         background-color: $lime;
-        border-radius: 50%;
+        border-radius: 100%;
         animation: move-down 2s infinite;
     }
 
