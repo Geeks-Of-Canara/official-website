@@ -90,4 +90,65 @@ nav ul li a {
   font-size: 18px;
   line-height: 35px;
   color: #A2A4A3;
+}
+
+footer {
+  height: 200px;
+  background: #25262A;
+  border-top: 2px solid #65F3AC;
+  padding: 47px 114px 0 114px;
+}
+footer .social_link {
+  display: flex;
+  justify-content: center;
+}
+footer .social_link .sm_container {
+  width: 34px;
+  height: 34px;
+  border-radius: 3px;
+  background: #65F3AC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 13px;
+}
+footer .social_link .sm_container img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .nav_links {
+  display: flex;
+  justify-content: center;
+  padding: 34px 0 0;
+}
+footer .nav_links ul {
+  list-style: none;
+  display: flex;
+}
+footer .nav_links ul li a {
+  text-decoration: none;
+  color: #A2A4A3;
+  width: 62px;
+  height: 20px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  margin: 0 15px;
+}
+footer .copyright {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #A2A4A3;
+  text-align: center;
+  padding: 34px 0;
+}
+footer .copyright span {
+  color: #65F3AC;
 }/*# sourceMappingURL=style.css.map */
