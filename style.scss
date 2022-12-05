@@ -318,3 +318,104 @@ footer{
         }
     }
 }
+
+// Contact us Section
+.contact_us{
+    height: 851px;
+    background: $secondary;
+    padding: 48px 114px 0;
+
+    .contact_heading{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 20px;
+        letter-spacing: 0.01em;
+        color: $grey;
+        text-align: center;
+    }
+    .underline{
+        width: 75px;
+        height: 5px;
+        background-color: $lime;
+        border-radius: 12px;
+        margin: 17px 0 74px;
+    }
+
+    form{
+        text-align: center;
+    }
+}
+
+// Footer Section
+footer{
+    height: 200px;
+    width: 100%;
+    background: $primary;
+    padding: 47px 114px 0;
+
+    .social_link{
+        display: flex;
+        justify-content: center;
+
+        .sm_container{
+            width: 34px;
+            height: 34px;
+            border-radius: 3px;
+            background: $lime;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 13px;
+
+            img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    .nav_links{
+        display: flex;
+        justify-content: center;
+        padding: 34px 0 0;
+
+        ul{
+            list-style: none;
+            display: flex;
+            
+            li{
+                a{
+                    text-decoration: none;
+                    color: $text;
+                    width: 62px;
+                    height: 20px;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 20px;
+                    letter-spacing: 0.01em;
+                    margin: 0 15px;
+                }
+            }
+        }
+    }
+
+    .copyright{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
+        color: $text;
+        text-align: center;
+        padding: 34px 0 0;
+
+        span{
+            color: $lime;
+        }
+    }
+}
