@@ -14,13 +14,15 @@ $text: #A2A4A3;
 $primary: #25262A;
 $secondary: #2D2F33;
 
+
 nav {
     display: flex;
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    position: fixed;
+    position: sticky;
     top: 0;
+    z-index: 10;
     padding: 20px 114px;
     background: $primary;
     border-bottom: 3px solid $lime;
@@ -73,50 +75,10 @@ nav {
     font-weight: 600;
 }
 
-// .banner {
-//     height: 100vh;
-//     display: flex;
-//     justify-content: center;
-//     align-items: flex-start;
-//     flex-direction: column;
-//     font-family: 'Montserrat';
-//     background: $primary;
-
-//     .content {
-//         display: flex;
-//         justify-content: space-evenly;
-//         align-items: flex-start;
-//         flex-direction: column;
-//         gap: 20px;
-//         padding-left: 114px;
-
-//         .banner-title {
-//             font-weight: 700;
-//             font-size: 40px;
-//             line-height: 65px;
-
-//             h2 {
-//                 color: $grey;
-//             }
-
-//             h1 {
-//                 color: $lime;
-//             }
-//         }
-
-//         p {
-//             width: 70%;
-//             font-weight: 500;
-//             font-size: 18px;
-//             line-height: 35px;
-//             color: $text;
-//         }
-//     }
-// }
-
 .banner {
     height: 100vh;
     position: relative;
+    z-index: 1;
     font-family: 'Montserrat';
     background: $primary;
 
@@ -212,19 +174,19 @@ nav {
 
 @media (min-width: 600px) {
     .grid-container {
-        .banner-image{
+        .banner-image {
             display: none;
         }
     }
 }
 
 // Contact us Section
-.contact_us{
+.contact_us {
     height: 851px;
     background: $secondary;
     padding: 48px 114px 0;
 
-    .contact_heading{
+    .contact_heading {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
@@ -234,7 +196,8 @@ nav {
         color: $grey;
         text-align: center;
     }
-    .underline{
+
+    .underline {
         width: 75px;
         height: 5px;
         background-color: $lime;
@@ -242,23 +205,23 @@ nav {
         margin: 17px 0 74px;
     }
 
-    form{
+    form {
         text-align: center;
     }
 }
 
 // Footer Section
-footer{
+footer {
     height: 200px;
     width: 100%;
     background: $primary;
     padding: 47px 114px 0;
 
-    .social_link{
+    .social_link {
         display: flex;
         justify-content: center;
 
-        .sm_container{
+        .sm_container {
             width: 34px;
             height: 34px;
             border-radius: 3px;
@@ -268,7 +231,7 @@ footer{
             align-items: center;
             margin: 0 13px;
 
-            img{
+            img {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -276,17 +239,17 @@ footer{
         }
     }
 
-    .nav_links{
+    .nav_links {
         display: flex;
         justify-content: center;
         padding: 34px 0 0;
 
-        ul{
+        ul {
             list-style: none;
             display: flex;
-            
-            li{
-                a{
+
+            li {
+                a {
                     text-decoration: none;
                     color: $text;
                     width: 62px;
@@ -303,7 +266,7 @@ footer{
         }
     }
 
-    .copyright{
+    .copyright {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
@@ -313,19 +276,19 @@ footer{
         text-align: center;
         padding: 34px 0 0;
 
-        span{
+        span {
             color: $lime;
         }
     }
 }
 
 // Contact us Section
-.contact_us{
+.contact_us {
     height: 851px;
     background: $secondary;
     padding: 48px 114px 0;
 
-    .contact_heading{
+    .contact_heading {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
@@ -335,7 +298,8 @@ footer{
         color: $grey;
         text-align: center;
     }
-    .underline{
+
+    .underline {
         width: 75px;
         height: 5px;
         background-color: $lime;
@@ -343,23 +307,23 @@ footer{
         margin: 17px 0 74px;
     }
 
-    form{
+    form {
         text-align: center;
     }
 }
 
 // Footer Section
-footer{
+footer {
     height: 200px;
     width: 100%;
     background: $primary;
     padding: 47px 114px 0;
 
-    .social_link{
+    .social_link {
         display: flex;
         justify-content: center;
 
-        .sm_container{
+        .sm_container {
             width: 34px;
             height: 34px;
             border-radius: 3px;
@@ -369,7 +333,7 @@ footer{
             align-items: center;
             margin: 0 13px;
 
-            img{
+            img {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -377,17 +341,17 @@ footer{
         }
     }
 
-    .nav_links{
+    .nav_links {
         display: flex;
         justify-content: center;
         padding: 34px 0 0;
 
-        ul{
+        ul {
             list-style: none;
             display: flex;
-            
-            li{
-                a{
+
+            li {
+                a {
                     text-decoration: none;
                     color: $text;
                     width: 62px;
@@ -404,7 +368,7 @@ footer{
         }
     }
 
-    .copyright{
+    .copyright {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
@@ -414,7 +378,7 @@ footer{
         text-align: center;
         padding: 34px 0 0;
 
-        span{
+        span {
             color: $lime;
         }
     }
