@@ -9,7 +9,10 @@
 nav {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   align-items: center;
+  position: fixed;
+  top: 0;
   padding: 20px 114px;
   background: #25262A;
   border-bottom: 3px solid #65F3AC;
@@ -92,11 +95,37 @@ nav ul li a {
   color: #A2A4A3;
 }
 
+.contact_us {
+  height: 851px;
+  background: #2D2F33;
+  padding: 48px 114px 0;
+}
+.contact_us .contact_heading {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #E2E2E2;
+  text-align: center;
+}
+.contact_us .underline {
+  width: 75px;
+  height: 5px;
+  background-color: #65F3AC;
+  border-radius: 12px;
+  margin: 17px 0 74px;
+}
+.contact_us form {
+  text-align: center;
+}
+
 footer {
   height: 200px;
+  width: 100%;
   background: #25262A;
-  border-top: 2px solid #65F3AC;
-  padding: 47px 114px 0 114px;
+  padding: 47px 114px 0;
 }
 footer .social_link {
   display: flex;
@@ -147,7 +176,7 @@ footer .copyright {
   line-height: 20px;
   color: #A2A4A3;
   text-align: center;
-  padding: 34px 0;
+  padding: 34px 0 0;
 }
 footer .copyright span {
   color: #65F3AC;
