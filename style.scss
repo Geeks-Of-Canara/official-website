@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// variables
+$lime: #65F3AC;
+$grey: #E2E2E2;
+$text:#A2A4A3;
+$primary: #25262A;
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 114px;
+    background: $primary;
+    border-bottom: 3px solid $lime;
+
+    .logo {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 21px;
+        color: #FFFFFF;
+
+        span {
+            color: $lime;
+        }
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 500px;
+
+        li {
+            list-style: none;
+            display: inline-block;
+
+            #active {
+                color: $lime;
+                border-bottom: 3px solid $lime;
+            }
+
+            a {
+                color: #FFFFFF;
+                text-decoration: none;
+                font-family: 'Red Hat Display';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.btn{
+    background: $lime;
+    border: none;
+    padding: 15px 60px 15px 30px;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.banner {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: 'Montserrat';
+    background: $primary;
+
+    .content {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 114px;
+
+        .banner-title {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 65px;
+
+            h2 {
+                color: $grey;
+            }
+
+            h1 {
+                color: $lime;
+            }
+        }
+
+        p {
+            width: 70%;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 35px;
+            color: $text;
+        }
+    }
+}
