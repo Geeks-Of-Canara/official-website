@@ -93,7 +93,7 @@ $secondary: #2D2F33;
 
     a#scroll-btn {
         width: 15px;
-        height: 30px;
+        height: 35px;
         border: 1px solid #51555E;
         background: #51555E;
         margin: auto;
@@ -101,6 +101,9 @@ $secondary: #2D2F33;
         left: 0;
         right: 0;
         bottom: 2.25em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         border-radius: 3em;
     }
@@ -109,10 +112,10 @@ $secondary: #2D2F33;
         position: absolute;
         content: "";
         margin: auto;
-        left: 0px;
+        // left: 0px;
         // right: 4.5px;
-        bottom: 1.25em;
-        height: 10px;
+        bottom: 1.30em;
+        height: 13px;
         width: 100%;
         background-color: $lime;
         border-radius: 50%;
@@ -131,7 +134,8 @@ $secondary: #2D2F33;
     }
 }
 
-#bgtext1,#bgtext2{
+#bgtext1,
+#bgtext2 {
     display: none;
 }
 
@@ -146,14 +150,15 @@ $secondary: #2D2F33;
             left: 0;
             right: 0;
             bottom: 2.25em;
+            display: flex;
+            justify-content: center;
         }
 
         a#scroll-btn:before {
-            left: 0px;
-            // right: 4.5px;
+            // left: 0.20px;
             bottom: 1.25em;
             height: 20px;
-            width: 100%;
+            width: 21px;
         }
 
         .content {
@@ -199,4 +204,5 @@ $secondary: #2D2F33;
         color: $lime;
     }
 }
+
 // Hero Section End
