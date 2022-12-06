@@ -10,9 +10,11 @@
 // variables
 $lime: #65F3AC;
 $grey: #E2E2E2;
+$white: #EAEAEA;
 $text: #A2A4A3;
 $primary: #25262A;
 $secondary: #2D2F33;
+$input : #2F3335;
 
 
 nav {
@@ -180,17 +182,22 @@ nav {
     }
 }
 
+
+
+
+
+//mobile friendly code
 // Contact us Section
 .contact_us {
-    height: 851px;
+    height: 845px;
     background: $secondary;
-    padding: 48px 114px 0;
+    padding: 30px 39px 0;
 
     .contact_heading {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
-        font-size: 35px;
+        font-size: 20px;
         line-height: 20px;
         letter-spacing: 0.01em;
         color: $grey;
@@ -198,24 +205,86 @@ nav {
     }
 
     .underline {
-        width: 75px;
+        width: 40px;
         height: 5px;
         background-color: $lime;
         border-radius: 12px;
-        margin: 17px 0 74px;
+        margin: 11px auto 42px;
     }
 
     form {
         text-align: center;
+
+        .form_box{
+            width: 364px;
+            height: 117px;
+            background: $secondary;
+            box-shadow: 5px 5px 25px rgba(101, 243, 172, 0.04);
+            border-radius: 9px;
+            margin: 0 auto 42px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            label{
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 13px;
+                line-height: 25px;
+                letter-spacing: 0.05em;
+                color: $white;
+                text-align: left;
+                margin-top: 10px;
+                margin-left: 28px;
+            }
+
+            .input{
+                width: 310px;
+                height: 47px;
+                background: $input;
+                border: none;
+                border-radius: 9px;
+                margin-left: 28px;
+                margin-bottom: 29px;
+                resize: none;
+                padding: 8px 8px;
+                color: $white;
+
+                &:focus{
+                    outline: none;
+                    border: 1px solid $lime;
+                }
+            }
+        }
+
+        .submit{
+            width: 240px;
+            height: 49px;
+            background: #65F3AC;
+            border-radius: 4px;
+
+            span{
+                width: 156px;
+                height: 20px;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: 0.01em;
+                color: #000000;
+            }
+        }
     }
 }
 
 // Footer Section
 footer {
-    height: 200px;
+    height: 217px;
     width: 100%;
     background: $primary;
-    padding: 47px 114px 0;
+    padding: 0 28px;
 
     .social_link {
         display: flex;
@@ -229,7 +298,7 @@ footer {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0 13px;
+            margin: 39px 26px 13px;
 
             img {
                 display: flex;
@@ -257,10 +326,10 @@ footer {
                     font-family: 'Montserrat';
                     font-style: normal;
                     font-weight: 400;
-                    font-size: 18px;
+                    font-size: 14px;
                     line-height: 20px;
                     letter-spacing: 0.01em;
-                    margin: 0 15px;
+                    margin: 13px 15px;
                 }
             }
         }
@@ -270,109 +339,7 @@ footer {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
-        line-height: 20px;
-        color: $text;
-        text-align: center;
-        padding: 34px 0 0;
-
-        span {
-            color: $lime;
-        }
-    }
-}
-
-// Contact us Section
-.contact_us {
-    height: 851px;
-    background: $secondary;
-    padding: 48px 114px 0;
-
-    .contact_heading {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 35px;
-        line-height: 20px;
-        letter-spacing: 0.01em;
-        color: $grey;
-        text-align: center;
-    }
-
-    .underline {
-        width: 75px;
-        height: 5px;
-        background-color: $lime;
-        border-radius: 12px;
-        margin: 17px 0 74px;
-    }
-
-    form {
-        text-align: center;
-    }
-}
-
-// Footer Section
-footer {
-    height: 200px;
-    width: 100%;
-    background: $primary;
-    padding: 47px 114px 0;
-
-    .social_link {
-        display: flex;
-        justify-content: center;
-
-        .sm_container {
-            width: 34px;
-            height: 34px;
-            border-radius: 3px;
-            background: $lime;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 13px;
-
-            img {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-    }
-
-    .nav_links {
-        display: flex;
-        justify-content: center;
-        padding: 34px 0 0;
-
-        ul {
-            list-style: none;
-            display: flex;
-
-            li {
-                a {
-                    text-decoration: none;
-                    color: $text;
-                    width: 62px;
-                    height: 20px;
-                    font-family: 'Montserrat';
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 18px;
-                    line-height: 20px;
-                    letter-spacing: 0.01em;
-                    margin: 0 15px;
-                }
-            }
-        }
-    }
-
-    .copyright {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
+        font-size: 14px;
         line-height: 20px;
         color: $text;
         text-align: center;
