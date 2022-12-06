@@ -6,6 +6,18 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #25262A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #65F3AC;
+}
+
 nav {
   display: flex;
   justify-content: space-between;

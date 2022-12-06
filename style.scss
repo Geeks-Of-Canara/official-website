@@ -16,6 +16,17 @@ $primary: #25262A;
 $secondary: #2D2F33;
 $input : #2F3335;
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: $primary;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $lime;
+}
 
 nav {
     display: flex;
