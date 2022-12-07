@@ -21,66 +21,68 @@
   <body>
     <!-- Nav bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">GOC </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Our Clubs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Goals</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Our Clubs</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- Nav bar end -->
-
-    <!-- Hero Section -->
-    <section class="banner">
-      <h1 id="bgtext1">TECHNICAL</h1>
-      <h1 id="bgtext2">CLUB</h1>
-      <div class="grid-container">
-        <div class="content">
-          <div class="banner-title">
-            <h2>Welcome to</h2>
-            <h1 id="type2"><!--Geeks Of Canara--></h1>
-          </div>
-          <p>
-            We are a Technical club of CEC aiming at Realizing the idea and
-            Inspiring the next!
-          </p>
-          <button class="btn">
-            <span
-              >Explore Our Team <img src="./Images/arrow.svg" alt="arrow"
-            /></span>
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">GOC </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
           </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Our Clubs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Goals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link-last" href="#">Team</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="banner-image">hello world</div>
-      </div>
-      <div class="scroll">
-        <a id="scroll-btn" href="#section-2"></a>
-      </div>
-    </section>
-    <!-- Hero Section End -->
+      </nav>
+      <!-- Nav bar end -->
+      <!-- Hero Section -->
+      <section class="banner">
+        <h1 id="bgtext1">TECHNICAL</h1>
+        <h1 id="bgtext2">CLUB</h1>
+        <div class="grid-container">
+          <div class="content">
+            <div class="banner-title">
+              <h2>Welcome to</h2>
+              <h1 id="type2"><!--Geeks Of Canara--></h1>
+            </div>
+            <p>
+              We are a Technical club of CEC aiming at Realizing the idea and
+              Inspiring the next!
+            </p>
+            <button class="button">
+              <span
+                >Explore Our Team <img src="./Images/arrow.svg" alt="arrow"
+              /></span>
+            </button>
+          </div>
+          <div class="banner-image">hello world</div>
+        </div>
+        <div class="scroll">
+          <a id="scroll-btn" href="#section-2"></a>
+        </div>
+      </section>
+      <!-- Hero Section End -->
 
     <!-- Our clubs Section -->
 
@@ -90,19 +92,21 @@
     <section class="contact_us">
       <h2 class="contact_heading">Contact Us</h2>
       <div class="underline"></div>
-      <form action="" method="" autocomplete="off">
-        <div class="form_box">
-          <label for="name">Name</label><br />
-          <input type="text" class="input" id="name" placeholder=" Your name" />
-        </div>
-        <div class="form_box">
-          <label for="email">Email</label><br />
-          <input
-            type="email"
-            class="input"
-            id="email"
-            placeholder=" Your email"
-          />
+      <form action="" method="" class="form" autocomplete="off">
+        <div class="form_group">
+            <div class="form_box">
+              <label for="name">Name</label><br />
+              <input type="text" class="input" id="name" placeholder=" Your name" />
+            </div>
+            <div class="form_box">
+              <label for="email">Email</label><br />
+              <input
+                type="email"
+                class="input"
+                id="email"
+                placeholder=" Your email"
+              />
+            </div>
         </div>
         <div class="form_box">
           <label for="subject">Subject</label><br />
@@ -124,9 +128,9 @@
             placeholder=" Type something here..."
           ></textarea>
         </div>
-        <button class="submit">
+        <button class="submit button">
           <span
-            >Send the Message<img src="./Images/arrow.svg" alt="arrow"
+            >Send the Message<img src="./Images/arrow.svg" class="arrow" alt="arrow"
           /></span>
         </button>
       </form>
@@ -135,26 +139,26 @@
     <!-- Footer Section -->
     <footer>
       <div class="social_link">
-        <div class="sm_container">
-          <a href="#"><img src="./Images/instagram.svg" alt="Instagram" /></a>
-        </div>
-        <div class="sm_container">
-          <a href="#"><img src="./Images/facebook.svg" alt="Facebook" /></a>
-        </div>
-        <div class="sm_container">
-          <a href="#"><img src="./Images/linkedin.svg" alt="LinkedIn" /></a>
-        </div>
-        <div class="sm_container">
-          <a href="#"><img src="./Images/email.svg" alt="Gmail" /></a>
-        </div>
+        <a href="#" class="sm_container">
+          <div><img src="./Images/instagram.svg" alt="Instagram" /></div>
+        </a href="#">
+        <a href="#" class="sm_container">
+          <div><img src="./Images/facebook.svg" alt="Facebook" /></div>
+        </a href="#">
+        <a href="#" class="sm_container">
+          <div><img src="./Images/linkedin.svg" alt="LinkedIn" /></div>
+        </a href="#">
+        <a href="#" class="sm_container">
+          <div><img src="./Images/email.svg" alt="Gmail" /></div>
+        </a href="#">
       </div>
       <div class="nav_links">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Our Clubs</a></li>
+          <li><a href="#" class="first_link">Home</a></li>
+          <li><a href="#">Clubs</a></li>
           <li><a href="#">Events</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#" class="last_link">Team</a></li>
         </ul>
       </div>
       <div class="copyright">

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,500&display=swap');
+
+* {
+    margin: 0;
+  }
+  
+  body {
+     background-color: #2D2F33;
+  }
+  
+  nav {
+     display: flex;
+     color: white;
+     font-family: Montserrat;
+     justify-content: space-between;
+     font-weight: 600;
+     margin: 20px;
+  
+  }
+  
+  .nav_head {
+     font-size: 25px;
+  }
+  
+  .nav_head::after {
+     display: block;
+     content: ' ';
+     border-radius: 12px;
+     width: 100%;
+     height: 3px;
+     background: #65F3AC;
+  
+  }
+  
+  .inner_head {
+     display: flex;
+     width: 15%;
+     justify-content: space-evenly;
+  }
+  
+  .inner_text
+  {
+     margin: 0 3px;
+     cursor: pointer;
+  }
+  
+  .container {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     grid-template-rows: 1fr 1fr 1fr;
+     row-gap: 2rem;
+     justify-self: center;
+  
+  }
+  
+  .card {
+  
+     border-radius: 10px;
+     background: linear-gradient(#2D2F33, #2D2F33) padding-box, linear-gradient(135deg, grey, #2D2F33) border-box;
+     border-radius: 10px;
+     border: 2px solid transparent;
+     backdrop-filter: blur(10px);
+     color: white;
+     display: flex;
+     flex-direction: column;
+     font-family: Montserrat;
+     font-size: 20px;
+     font-weight: 600;
+     height: 338px;
+     justify-content: space-evenly;
+     margin: 10px;
+     padding: 10px;
+     width: 268px;
+  }
+  
+  .card:hover {
+     transition: all 2s ease;
+     box-shadow: -.5px -.5px .5px rgba(255, 255, 255, 0.25), 5px 5px 20px rgba(255, 255, 255, 0.1);
+  }
+  
+  .card-img {
+     width: 232px;
+     height: 174px;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     border-radius: 5px;
+  }
+  
+  
+  .card-content {
+     font-size: 25px;
+     font-weight: 700;
+     padding-left: 20px;
+     margin: 0;
+  
+  }
+  
+  .head_name {
+     font-size: 18px;
+     margin: 10px 0;
+  }
+  
+  .club_title {
+     font-size: 11px;
+     font-weight: 600;
+     color: #65F3AC;
+  
+  }
+  
+  .logo_img {
+     cursor: pointer;
+     margin-right: 9px;
+  }
+  
+  .card-logo {
+     padding-left: 20px;
+  
+  
+  }
+  
+  /* Tablet view :) */
+  
+  @media (min-width: 768px) and (max-width: 1023px){
+    .container
+    {
+     grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  /* Mobile view :) */
+  
+  @media(max-width: 480px) {
+     .container {
+         grid-template-columns: 1fr;
+         grid-template-rows: auto;
+         justify-content: center;
+         justify-items: center;
+         align-self: center;
+     }
+  
+  }
