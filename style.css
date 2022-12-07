@@ -18,6 +18,16 @@
   background: #65F3AC;
 }
 
+::-moz-selection {
+  background: #65F3AC;
+  color: #2D2F33;
+}
+
+::selection {
+  background: #65F3AC;
+  color: #2D2F33;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -235,6 +245,7 @@ nav ul li a {
   resize: none;
   padding: 8px 8px;
   color: #EAEAEA;
+  overflow: auto;
 }
 .contact_us form .form_box .input:focus {
   outline: none;

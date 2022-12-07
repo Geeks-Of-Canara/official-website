@@ -16,16 +16,21 @@ $primary: #25262A;
 $secondary: #2D2F33;
 $input : #2F3335;
 
+// Scrollbar styling
 ::-webkit-scrollbar {
     width: 8px;
 }
-
 ::-webkit-scrollbar-track {
     background: $primary;
 }
-
 ::-webkit-scrollbar-thumb {
     background: $lime;
+}
+
+// Text selection
+::selection{
+    background: $lime;
+    color: $secondary;
 }
 
 nav {
@@ -197,7 +202,7 @@ nav {
 
 
 
-//mobile friendly code
+//mobile friendly code - completed
 // Contact us Section
 .contact_us {
     height: 845px;
@@ -261,6 +266,7 @@ nav {
                 resize: none;
                 padding: 8px 8px;
                 color: $white;
+                overflow: auto;
 
                 &:focus{
                     outline: none;
@@ -295,6 +301,8 @@ nav {
     }
 }
 
+
+//mobile friendly code - completed
 // Footer Section
 footer {
     height: 217px;
