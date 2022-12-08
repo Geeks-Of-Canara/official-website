@@ -76,11 +76,17 @@ body {
   padding: 25px 20px;
   margin-bottom: 0;
   width: 100%;
+  transition: transform 0.1s ease-out;
 }
 
 .card:hover {
   transition: all 2s ease;
+  transform: scale(1.03);
   box-shadow: -0.5px -0.5px 0.5px rgba(255, 255, 255, 0.25), 5px 5px 20px rgba(255, 255, 255, 0.1);
+}
+
+.logo_img:hover {
+  transform: scale(1.5);
 }
 
 .card-img {
@@ -110,6 +116,7 @@ body {
 .logo_img {
   cursor: pointer;
   margin-right: 9px;
+  transition: transform 0.1s;
 }
 
 /* large phone view :) */
