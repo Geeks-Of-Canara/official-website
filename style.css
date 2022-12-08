@@ -212,26 +212,152 @@
   background-color: red;
 }
 
-.contact_us {
-  background: #2d2f33;
-  padding: 50px;
+.card {
+  border-radius: 10px;
+  background: linear-gradient(#2d2f33, #2d2f33) padding-box, linear-gradient(135deg, grey, #2d2f33) border-box;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat;
+  font-weight: 600;
+  justify-content: space-evenly;
+  padding: 35px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  margin: 0 0 50px;
 }
-.contact_us .contact_heading {
+.card:last-child {
+  margin: 0;
+}
+.card .card-img {
+  width: 100%;
+  background-color: #2f3335;
+}
+.card .card-content {
+  margin: 15px 0 0;
+}
+.card .card-content .card-heading-container {
+  display: flex;
+  margin: 10px 0 0;
+}
+.card .card-content .card-heading {
+  font-weight: 600;
+  font-size: 1.25em;
+  margin-right: 20px;
+}
+.card .card-content .card-heading::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 3px;
+  background-color: #65f3ac;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.card .card-content .circle {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #65f3ac;
+  border-radius: 50%;
+  color: #25262a;
+}
+.card .card-content .card-description {
+  font-weight: normal;
+  color: #bfbfbf;
+  font-size: 1em;
+  margin-top: 20px;
+  line-height: 35px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.card .card-content .view-more {
+  background-color: #65f3ac;
+  padding: 10px 24px;
+  color: #25262a;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.our_club {
+  padding: 50px 30px;
+  background-color: #2d2f33;
+}
+.our_club .our_club_heading {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 20px;
   letter-spacing: 0.01em;
   color: #e2e2e2;
   text-align: center;
 }
-.contact_us .underline {
+.our_club .club_button {
+  display: none;
+}
+.our_club .underline {
   width: 40px;
   height: 5px;
   background-color: #65f3ac;
   border-radius: 12px;
   margin: 11px auto 42px;
+}
+
+.what_we_do {
+  padding: 50px 30px;
+  background-color: #26282B;
+  display: grid;
+}
+.what_we_do .wwd_heading {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #e2e2e2;
+  text-align: center;
+}
+.what_we_do .card {
+  padding: 30px;
+}
+.what_we_do .card .card-content {
+  margin: 0;
+}
+
+.underline {
+  width: 40px;
+  height: 5px;
+  background-color: #65f3ac;
+  border-radius: 12px;
+  margin: 11px auto 42px;
+}
+
+.contact_us {
+  background: #2d2f33;
+  padding: 50px 30px;
+}
+.contact_us .contact_heading {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #e2e2e2;
+  text-align: center;
 }
 .contact_us .form {
   max-width: 768px;
@@ -316,7 +442,7 @@ footer .nav_links ul li a {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.01em;
   margin: 13px 15px;
@@ -399,13 +525,95 @@ footer .copyright span {
     flex-direction: row !important;
     gap: 30px;
   }
+  .whatwedo_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
 }
 @media screen and (min-width: 980px) {
   .navbar,
 .banner {
-    padding: 0.5rem 100px;
+    padding: 0.5em 100px;
+  }
+  .our_club {
+    padding: 50px 100px;
+  }
+  .our_club .card {
+    background: unset;
+    padding: 0;
+  }
+  .our_club .club_button {
+    border-radius: 10px;
+    background: linear-gradient(#2d2f33, #2d2f33) padding-box, linear-gradient(135deg, grey, #2d2f33) border-box;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: white;
+    display: flex;
+    align-items: center;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 1em;
+    justify-content: space-evenly;
+    padding: 35px;
+    position: relative;
+    width: 100%;
+    margin: 0 0 30px;
+  }
+  .our_club .club_button .club_icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #65f3ac;
+  }
+  .our_club .club_button .pointer {
+    display: none;
+  }
+  .our_club .club_button.active {
+    background-color: #2d2f33;
+    border: 2px solid #65f3ac;
+  }
+  .our_club .club_button.active .pointer {
+    display: block;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-top: 0;
+    border-bottom: 20px solid #65f3ac;
+    transform: rotate(90deg);
+    position: absolute;
+    right: -30px;
+  }
+  .club_container {
+    display: grid;
+    grid-template-columns: 30% auto;
+    gap: 60px;
+  }
+  .club_container .club_navigator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+  }
+  .club_container .card:not(:nth-child(1)) {
+    display: none;
   }
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .banner-image {
+    display: block !important;
+  }
+  .banner-image img {
+    width: 100%;
+  }
+  .what_we_do {
+    padding: 50px 100px;
+  }
+  .whatwedo_container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }/*# sourceMappingURL=style.css.map */

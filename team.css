@@ -55,8 +55,8 @@ body {
 .card-container {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 2rem;
   justify-self: center;
+  gap: 5em;
 }
 
 .card {
@@ -74,6 +74,7 @@ body {
   font-weight: 600;
   justify-content: space-evenly;
   padding: 25px 20px;
+  margin-bottom: 0;
   width: 100%;
 }
 
@@ -114,7 +115,6 @@ body {
 /* large phone view :) */
 @media screen and (min-width: 600px) {
   .card-container {
-    grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
     gap: 20px;
   }
@@ -122,7 +122,7 @@ body {
 /* Tablet view :) */
 @media screen and (min-width: 700px) {
   .card-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
   }
 }
@@ -131,7 +131,12 @@ body {
     padding: 0 100px 50px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1300px) {
   .card-container {
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
