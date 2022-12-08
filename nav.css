@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 20px 114px;
+  background: #25262A;
+  border-bottom: 3px solid #65F3AC;
+}
+nav .logo {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  color: #FFFFFF;
+}
+nav .logo span {
+  color: #65F3AC;
+}
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 500px;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+nav ul li #active {
+  color: #65F3AC;
+  border-bottom: 3px solid #65F3AC;
+}
+nav ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+}/*# sourceMappingURL=nav.css.map */
