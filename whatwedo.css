@@ -7,15 +7,6 @@
 body {
   background-color: #2d2f33;
 }
-/* 
-.sub-nav {
-  display: flex;
-  color: white;
-  justify-content: space-between;
-  font-weight: 600;
-  margin: 30px auto;
-  align-items: center;
-} */
 
 .wwd-head {
   font-family: "Montserrat";
@@ -155,7 +146,7 @@ body {
 @media screen and (min-width: 700px) {
   .card-container {
     row-gap: 4rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
   }
   .card {
@@ -164,8 +155,8 @@ body {
     border-radius: 9px;
   }
 }
-@media screen and (min-width2: 980px) {
-  .team-area {
+@media screen and (min-width: 980px) {
+  .whatwedo-area {
     padding: 0 100px 50px;
   }
   .card {
@@ -177,7 +168,7 @@ body {
 @media screen and (min-width: 1200px) {
   .card-container {
     row-gap: 4rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
   }
   .card {
