@@ -1,47 +1,191 @@
 // Path: _nav.scss
 @import 'nav';
 // Path: _footer.scss
-.event-section {
-    width: 100vw;
-    height: 100vh;
-    background-color: #2d2f33;
+body {
+    background-color: $secondary;
+}
+
+//MIXINS
+@mixin underline( $width: 100%, $height: 3px) {
+    position: relative;
+    &:after {
+        position: absolute;
+        content: " ";
+        height: $height;
+        width: $width;
+        background-color: $lime;
+        bottom: -5px;
+        left: 0;
+    }
+}
+
+//event title and dates
+.sub-nav {
     display: flex;
+    color: white;
+    justify-content: space-between;
+    font-weight: 600;
+    margin: 30px auto;
+    align-items: center;
+}
+
+.nav_head {
+    font-size: 20px;
+}
+
+.nav_head::after {
+    display: block;
+    content: ' ';
+    border-radius: 12px;
+    width: 100%;
+    height: 3px;
+    background: #65F3AC;
+}
+
+.inner_head {
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: normal;
+}
+
+.inner_text {
+    margin: 0 3px;
+    cursor: pointer;
+    &:first-child {
+        margin-right: 20px;
+    }
+    &.active {
+        font-weight: bold !important;
+        color: #65F3AC !important;
+    }
+}
+
+.team-area {
+    padding: 0 50px 50px;
+}
+
+//title end
+// -->
+//card begin 
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-self: center;
+    row-gap: 3rem;
+}
+
+.card {
+    border-radius: 10px;
+    background: linear-gradient($secondary, $secondary) padding-box, linear-gradient(135deg, grey, $secondary) border-box;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    color: $white;
+    display: flex;
+    min-width: 300px;
     flex-direction: column;
-    .event-title-date {
-        height: 100px;
-        width: 100vw;
-        // background-color: red;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        h2 {
-            font-size: 1.75rem;
-            margin: 0;
-            color: $white;
-            padding-left: 80px;
-        }
-        .event-title-years {
-            display: flex;
-            flex-direction: row;
-            color: $white;
-            padding-right: 80px;
-            margin-bottom: 0;
-            li {
-                list-style: none;
-                margin: auto 10px;
-                a {
-                    font-size: 1.25rem;
-                    text-decoration: none;
-                    color: white;
-                } //a
-            } //li
-        } //ul
-    } //event-title-date
-    .event-divs {
-        height: 100%;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    justify-content: space-evenly;
+    padding: 30px 10%;
+    width: 100%;
+    &:hover {
+        transition: all 0.5s ease;
+        box-shadow: 3px 3px 30px rgba(101, 243, 172, 0.1);
+    }
+    .card-img-cover {
+        height: 200px;
         width: 100%;
-        background-color: pink;
-    } //event-divs
-} //event-section
+        background-color: $text;
+        border-radius: 5px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    }
+    .event-content {
+        margin: 25px auto;
+        margin-bottom: 0;
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 0;
+            @include underline(30%, 3px);
+        }
+        p {
+            font-size: 1rem;
+            color: #bfbfbf;
+            font-weight: normal;
+            margin: 20px 0 0;
+            color: $text;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-height: 35px;
+            -webkit-box-orient: vertical;
+        }
+        .visit-button {
+            border-radius: 5px;
+            padding: 1px 10px;
+            background-color: $lime;
+            margin: 20px 0 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+                color: $black;
+                font-weight: bold;
+                font-size: 0.75rem;
+                margin: 0;
+            }
+        }
+    }
+}
+
+//my code color
+//my code Ends
+//card ending
+//--->
+//media queries
+@media screen and (min-width: 600px) {
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: space-between;
+        gap: 3rem !important;
+        .card {
+            max-width: 500px;
+            margin: auto;
+        }
+    }
+}
+
+
+/* Tablet view :) */
+
+@media screen and (min-width: 700px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .team-area {
+        padding: 0 100px 50px;
+    }
+}
+
+// Desktop View
+@media screen and (min-width: 1200px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        gap: 3rem !important;
+    }
+}
+
+// Path: _event.scss
 @import 'footer';
