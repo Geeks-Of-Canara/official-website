@@ -28,6 +28,77 @@
   color: #2d2f33;
 }
 
+.modal {
+ 
+  display: none;
+  
+  transition-duration: 0.5s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;                                                      
+  background: rgba(255, 250, 250, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.line
+{
+  margin: 0;
+}
+.modal-content {
+  background-color: #000000c2;
+  margin: auto;
+  padding: 20px;
+  color: rgb(225, 245, 220);
+  border: 1px solid rgb(218, 218, 218);
+  width: 100%;
+  backdrop-filter: blur(20px);
+  height: 100%;
+}
+
+.modal-head
+{
+  display: flex;
+  justify-content: space-between;
+  color: #65f3ac;
+ 
+}
+
+.model-title
+{
+  align-self: center;
+  font-size: 30px;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.model-description
+{
+  font-size: 20px;
+  font-weight: normal;
+  padding-top: 5px;
+  color: #bfbfbf;
+  text-align: justify;
+}
+
+
+
+.close {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #65f3ac;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .button {
   background: #65f3ac;
   border: none;
@@ -44,6 +115,41 @@
 }
 .button .arrow {
   margin-left: 10px;
+}
+
+
+
+.circlee
+{
+  position: absolute;
+  width: 450px;
+  background-color: rgba(0, 255, 128, 0.144);
+  height: 450px;
+  opacity: 0.4;
+  border-radius: 20rem;
+  filter: blur(7.3rem);
+  z-index: 1;
+}
+
+.circlee1
+{
+  
+  top: 250px;
+  left: 0px;
+}
+
+
+.circlee2
+{
+  top: 1450px;
+  left: 15px;
+
+}
+
+.circlee3
+{
+  right: 0px;
+  top: 1950px;
 }
 
 .banner {
