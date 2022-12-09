@@ -294,6 +294,60 @@
   padding: 50px 30px;
   background-color: #2d2f33;
 }
+.our_club .card:not(:nth-child(1)) {
+  display: none;
+}
+.our_club .club_navigator {
+  margin: 0 0 30px;
+}
+.our_club .club_button {
+  border-radius: 10px;
+  background: linear-gradient(#2d2f33, #2d2f33) padding-box, linear-gradient(135deg, grey, #2d2f33) border-box;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: white;
+  display: flex;
+  align-items: center;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 1em;
+  justify-content: space-evenly;
+  padding: 14px;
+  margin: 0px 0 20px;
+  position: relative;
+  width: 100%;
+}
+.our_club .club_button .club_icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: none;
+  background-color: #65f3ac;
+}
+.our_club .club_button .club_name {
+  font-size: 14px;
+}
+.our_club .club_button .pointer {
+  display: none;
+}
+.our_club .club_button.active {
+  background-color: #2d2f33;
+  border: 2px solid #65f3ac;
+}
+.our_club .club_button.active .pointer {
+  display: block;
+  width: 0;
+  height: 0;
+  border: 16px solid transparent;
+  border-top: 0;
+  border-bottom: 16px solid #65f3ac;
+  left: 50%;
+  transform: rotate(180deg) translateX(50%);
+  position: absolute;
+  bottom: -18px;
+}
 .our_club .our_club_heading {
   font-family: "Montserrat";
   font-style: normal;
@@ -304,8 +358,14 @@
   color: #e2e2e2;
   text-align: center;
 }
+.our_club .club_navigator {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  gap: 20px;
+}
 .our_club .club_button {
-  display: none;
+  display: block;
 }
 .our_club .underline {
   width: 40px;
@@ -314,10 +374,13 @@
   border-radius: 12px;
   margin: 11px auto 42px;
 }
+.our_club .card-img {
+  min-height: 250px;
+}
 
 .what_we_do {
   padding: 50px 30px;
-  background-color: #26282B;
+  background-color: #26282b;
   display: grid;
 }
 .what_we_do .wwd_heading {
@@ -515,6 +578,12 @@ footer .copyright span {
     color: #65f3ac;
   }
 }
+@media screen and (min-width: 600px) {
+  .our_club .club_navigator {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 @media screen and (max-width: 768px) {
   .navbar .navbar-nav .nav-link {
     margin-left: 2em !important;
@@ -545,47 +614,26 @@ footer .copyright span {
     padding: 0;
   }
   .our_club .club_button {
-    border-radius: 10px;
-    background: linear-gradient(#2d2f33, #2d2f33) padding-box, linear-gradient(135deg, grey, #2d2f33) border-box;
-    border-radius: 10px;
-    border: 2px solid transparent;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    color: white;
     display: flex;
-    align-items: center;
-    font-family: Montserrat;
-    font-weight: 600;
-    font-size: 1em;
-    justify-content: space-evenly;
-    padding: 35px;
-    position: relative;
-    width: 100%;
-    margin: 0 0 30px;
+    padding: 30px;
   }
   .our_club .club_button .club_icon {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background-color: #65f3ac;
+    display: block;
   }
-  .our_club .club_button .pointer {
-    display: none;
-  }
-  .our_club .club_button.active {
-    background-color: #2d2f33;
-    border: 2px solid #65f3ac;
+  .our_club .club_button .club_name {
+    font-size: 1rem;
   }
   .our_club .club_button.active .pointer {
-    display: block;
     width: 0;
     height: 0;
-    border: 15px solid transparent;
+    border: 16px solid transparent;
     border-top: 0;
-    border-bottom: 20px solid #65f3ac;
-    transform: rotate(90deg);
+    left: unset;
+    top: 40%;
+    right: -35px;
+    border-bottom: 16px solid #65f3ac;
+    transform: rotate(90deg) translateY(50%);
     position: absolute;
-    right: -30px;
   }
   .club_container {
     display: grid;
@@ -597,9 +645,6 @@ footer .copyright span {
     flex-direction: column;
     justify-content: space-between;
     font-size: 20px;
-  }
-  .club_container .card:not(:nth-child(1)) {
-    display: none;
   }
   .grid-container {
     grid-template-columns: repeat(2, 1fr);

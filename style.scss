@@ -235,84 +235,142 @@ $input: #2f3335;
 // Our clubs section
 
 .card {
+  border-radius: 10px;
+  background: linear-gradient(#2d2f33, #2d2f33) padding-box,
+    linear-gradient(135deg, grey, #2d2f33) border-box;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  backdrop-filter: blur(10px);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat;
+  font-weight: 600;
+  justify-content: space-evenly;
+  padding: 35px;
+  height: fit-content;
+  width: 100%;
+  margin: 0 0 50px;
+  
+  &:last-child {
+    margin: 0;
+  }
+  
+  .card-img {
+    width: 100%;
+    background-color: $input;
+  }
+  .card-content {
+    margin: 15px 0 0;
+    .card-heading-container {
+      display: flex;
+      margin: 10px 0 0;
+    }
+    .card-heading {
+      font-weight: 600;
+      font-size: 1.25em;
+      margin-right: 20px;
+      &::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 3px;
+        background-color: $lime;
+        border-radius: 5px;
+        margin-top: 5px;
+      }
+    }
+    .circle {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $lime;
+      border-radius: 50%;
+      color: #25262a;
+    }
+    .card-description {
+      font-weight: normal;
+      color: #bfbfbf;
+      font-size: 1em;
+      margin-top: 20px;
+      line-height: 35px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+    .view-more {
+      background-color: $lime;
+      padding: 10px 24px;
+      color: #25262a;
+      margin-top: 20px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  }
+}
+
+.our_club {
+  padding: 50px 30px;
+  background-color: $secondary;
+  .card:not(:nth-child(1)) {
+        display: none;
+  }
+  .club_navigator{
+    margin: 0 0 30px;
+  }
+  .club_button {
     border-radius: 10px;
     background: linear-gradient(#2d2f33, #2d2f33) padding-box,
       linear-gradient(135deg, grey, #2d2f33) border-box;
     border-radius: 10px;
     border: 2px solid transparent;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     color: white;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     font-family: Montserrat;
     font-weight: 600;
+    font-size: 1em;
     justify-content: space-evenly;
-    padding: 35px;
-    height: fit-content;
+    padding: 14px;
+    margin: 0px 0 20px;
+    position: relative;
     width: 100%;
-    margin: 0 0 50px;
-    &:last-child {
-      margin: 0;
+    
+    .club_icon {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: none;
+      background-color: $lime;
     }
-    .card-img {
-      width: 100%;
-      background-color: $input;
+    .club_name{
+        font-size: 14px;
     }
-    .card-content {
-      margin: 15px 0 0;
-      .card-heading-container {
-        display: flex;
-        margin: 10px 0 0;
-      }
-      .card-heading {
-        font-weight: 600;
-        font-size: 1.25em;
-        margin-right: 20px;
-        &::after {
-          content: "";
-          display: block;
-          width: 50%;
-          height: 3px;
-          background-color: $lime;
-          border-radius: 5px;
-          margin-top: 5px;
-        }
-      }
-      .circle {
-        width: 30px;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $lime;
-        border-radius: 50%;
-        color: #25262a;
-      }
-      .card-description {
-        font-weight: normal;
-        color: #bfbfbf;
-        font-size: 1em;
-        margin-top: 20px;
-        line-height: 35px;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-      }
-      .view-more {
-        background-color: $lime;
-        padding: 10px 24px;
-        color: #25262a;
-        margin-top: 20px;
-        border-radius: 5px;
-        font-weight: bold;
-      }
+    .pointer {
+      display: none;
     }
   }
-
-.our_club {
-  padding: 50px 30px;
-  background-color: $secondary;
+  .club_button.active {
+    background-color: $secondary;
+    border: 2px solid $lime;
+    .pointer {
+      display: block;
+      width: 0;
+      height: 0;
+      border: 16px solid transparent;
+      border-top: 0;
+      border-bottom: 16px solid $lime;
+      left: 50%;
+      transform: rotate(180deg) translateX(50%);
+      position: absolute;
+      bottom:-18px;
+    }
+  }
   .our_club_heading {
     font-family: "Montserrat";
     font-style: normal;
@@ -323,8 +381,14 @@ $input: #2f3335;
     color: $grey;
     text-align: center;
   }
+  .club_navigator {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+    gap: 20px;
+  }
   .club_button {
-    display: none;
+    display: block;
   }
 
   .underline {
@@ -334,13 +398,16 @@ $input: #2f3335;
     border-radius: 12px;
     margin: 11px auto 42px;
   }
+  .card-img {
+    min-height: 250px;
+  }
 }
 
 // What we do Section
 .what_we_do {
-    padding:50px 30px;
-    background-color: #26282B;
-    display: grid;
+  padding: 50px 30px;
+  background-color: #26282b;
+  display: grid;
   .wwd_heading {
     font-family: "Montserrat";
     font-style: normal;
@@ -351,10 +418,10 @@ $input: #2f3335;
     color: $grey;
     text-align: center;
   }
-  .card{
-    padding:30px;
-    .card-content{
-        margin:0;
+  .card {
+    padding: 30px;
+    .card-content {
+      margin: 0;
     }
   }
 }
@@ -568,6 +635,13 @@ footer {
   }
 }
 
+@media screen and(min-width: 600px) {
+    .our_club .club_navigator{
+        display: flex;
+        justify-content: space-between;
+      }
+}
+
 @media screen and (max-width: 768px) {
   .navbar .navbar-nav .nav-link {
     margin-left: 2em !important;
@@ -579,11 +653,12 @@ footer {
     flex-direction: row !important;
     gap: 30px;
   }
-  .whatwedo_container{
+  .whatwedo_container {
     display: grid;
-    grid-template-columns: repeat(2,1fr);   
-    column-gap:40px;
-}
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+  }
+  
 }
 
 @media screen and (min-width: 980px) {
@@ -597,51 +672,29 @@ footer {
       background: unset;
       padding: 0;
     }
-    .club_button {
-      border-radius: 10px;
-      background: linear-gradient(#2d2f33, #2d2f33) padding-box,
-        linear-gradient(135deg, grey, #2d2f33) border-box;
-      border-radius: 10px;
-      border: 2px solid transparent;
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-      color: white;
-      display: flex;
-      align-items: center;
-      font-family: Montserrat;
-      font-weight: 600;
-      font-size: 1em;
-      justify-content: space-evenly;
-      padding: 35px;
-      position: relative;
-      width: 100%;
-      margin: 0 0 30px;
-      .club_icon {
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        background-color: $lime;
-      }
-      .pointer {
-        display: none;
-      }
+    .club_button{
+        display: flex;
+        padding: 30px;
+        .club_icon{
+            display: block;
+        }
+        .club_name{
+            font-size: 1rem;
+        }
     }
-    .club_button.active {
-      background-color: $secondary;
-      border: 2px solid $lime;
-      .pointer {
-        display: block;
+    //card area
+    .club_button.active .pointer{
         width: 0;
         height: 0;
-        border: 15px solid transparent;
+        border: 16px solid transparent;
         border-top: 0;
-        border-bottom: 20px solid $lime;
-        transform: rotate(90deg);
+        left:unset;
+        top:40%;
+        right:-35px;
+        border-bottom: 16px solid $lime;
+        transform: rotate(90deg) translateY(50%);
         position: absolute;
-        right: -30px;
       }
-    }
-    
   }
 
   .club_container {
@@ -654,9 +707,6 @@ footer {
       justify-content: space-between;
       font-size: 20px;
     }
-    .card:not(:nth-child(1)) {
-      display: none;
-    }
   }
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
@@ -667,11 +717,11 @@ footer {
       width: 100%;
     }
   }
-  .what_we_do{
-    padding: 50px 100px ;
+  .what_we_do {
+    padding: 50px 100px;
   }
-  .whatwedo_container{
-    grid-template-columns: repeat(3,1fr);   
-}
+  .whatwedo_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 //Navbar Ends

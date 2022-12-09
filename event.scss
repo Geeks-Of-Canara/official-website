@@ -1,47 +1,259 @@
-// Path: _nav.scss
-@import 'nav';
+$lime: #65F3AC;
+$grey: #E2E2E2;
+$white: #EAEAEA;
+$text: #A2A4A3;
+$primary: #25262A;
+$secondary: #2D2F33;
+$input: #2F3335;
 // Path: _footer.scss
-.event-section {
-    width: 100vw;
-    height: 100vh;
-    background-color: #2d2f33;
+body {
+    background-color: $secondary;
+}
+
+//MIXINS
+@mixin underline( $width: 100%, $height: 3px) {
+    position: relative;
+    &:after {
+        position: absolute;
+        content: " ";
+        height: $height;
+        width: $width;
+        background-color: $lime;
+        bottom: -5px;
+        left: 0;
+    }
+}
+
+
+
+// change navbar color
+.navbar {
+    background-color: #25262a !important;
+    border-bottom: 3px solid #65f3ac;
+    padding: 0.5rem 50px;
+    .container-fluid {
+      padding: 0;
+    }
+    .navbar-toggler {
+      padding: 0;
+    }
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+  }
+  
+  // change navbar color
+  .navbar .navbar-nav .nav-link {
+    color: #fff;
+  }
+  
+  // change nav brand color with first letter red
+  
+  .navbar .navbar-brand {
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  
+  .navbar .navbar-brand::first-letter {
+    color: #65f3ac;
+  }
+  
+  // Change active link color with underline
+  
+  .navbar .navbar-nav .nav-link.active {
+    color: #65f3ac;
+    font-weight: bold;
+    border-bottom: 3px solid #65f3ac;
+  }
+  
+  .navbar .navbar-nav .nav-link {
+    margin-right: 1.6rem;
+  }
+  
+  .navbar .navbar-nav .nav-link.link-last {
+    margin-right: 0;
+  }
+  // change icon of .navbar-toggler-icon
+  
+  .navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' standalone='no'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 20010904//EN' 'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'%3E%3Csvg version='1.0' xmlns='http://www.w3.org/2000/svg' width='257.000000pt' height='238.000000pt' viewBox='0 0 257.000000 238.000000' preserveAspectRatio='xMidYMid meet'%3E%3Cg transform='translate(0.000000,238.000000) scale(0.100000,-0.100000)'%0Afill='%2365F3AC' stroke='none'%3E%3Cpath d='M398 2091 c-122 -24 -148 -198 -41 -268 26 -17 78 -18 978 -18 l950%0A0 33 23 c85 61 83 192 -5 249 -26 17 -79 18 -953 19 -509 1 -942 -1 -962 -5z'/%3E%3Cpath d='M370 1328 c-102 -52 -107 -196 -10 -253 34 -20 50 -20 680 -20 606 0%0A648 1 673 18 89 58 89 196 0 254 -25 17 -70 18 -663 21 l-635 2 -45 -22z'/%3E%3Cpath d='M704 590 c-324 -5 -343 -6 -364 -25 -78 -71 -62 -201 30 -247 31 -15%0A75 -17 365 -18 368 0 377 1 422 69 56 83 7 208 -87 222 -14 2 -179 2 -366 -1z'/%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+  
+  // change the color of the navbar-toggler-icon when it is clicked
+  .navbar .navbar-toggler-icon:focus {
+    background-color: red;
+  }
+//event title and dates
+.sub-nav {
     display: flex;
+    color: white;
+    justify-content: space-between;
+    font-weight: 600;
+    margin: 30px auto;
+    align-items: center;
+}
+
+.nav_head {
+    font-size: 20px;
+}
+
+.nav_head::after {
+    display: block;
+    content: ' ';
+    border-radius: 12px;
+    width: 100%;
+    height: 3px;
+    background: #65F3AC;
+}
+
+.inner_head {
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: normal;
+}
+
+.inner_text {
+    margin: 0 3px;
+    cursor: pointer;
+    &:first-child {
+        margin-right: 20px;
+    }
+    &.active {
+        font-weight: bold !important;
+        color: #65F3AC !important;
+    }
+}
+
+.team-area {
+    padding: 0 50px 50px;
+}
+
+//title end
+// -->
+//card begin 
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-self: center;
+    row-gap: 3rem;
+}
+
+.card {
+    border-radius: 10px;
+    background: linear-gradient($secondary, $secondary) padding-box, linear-gradient(135deg, grey, $secondary) border-box;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    color: $white;
+    display: flex;
+    min-width: 300px;
     flex-direction: column;
-    .event-title-date {
-        height: 100px;
-        width: 100vw;
-        // background-color: red;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        h2 {
-            font-size: 1.75rem;
-            margin: 0;
-            color: $white;
-            padding-left: 80px;
-        }
-        .event-title-years {
-            display: flex;
-            flex-direction: row;
-            color: $white;
-            padding-right: 80px;
-            margin-bottom: 0;
-            li {
-                list-style: none;
-                margin: auto 10px;
-                a {
-                    font-size: 1.25rem;
-                    text-decoration: none;
-                    color: white;
-                } //a
-            } //li
-        } //ul
-    } //event-title-date
-    .event-divs {
-        height: 100%;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    justify-content: space-evenly;
+    padding: 30px 10%;
+    width: 100%;
+    &:hover {
+        transition: all 0.5s ease;
+        box-shadow: 3px 3px 30px rgba(101, 243, 172, 0.1);
+    }
+    .card-img-cover {
+        height: 200px;
         width: 100%;
-        background-color: pink;
-    } //event-divs
-} //event-section
+        background-color: $text;
+        border-radius: 5px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    }
+    .event-content {
+        margin: 25px auto;
+        margin-bottom: 0;
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 0;
+            @include underline(30%, 3px);
+        }
+        p {
+            font-size: 1rem;
+            color: #bfbfbf;
+            font-weight: normal;
+            margin: 20px 0 0;
+            color: $text;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-height: 35px;
+            -webkit-box-orient: vertical;
+        }
+        .visit-button {
+            border-radius: 5px;
+            padding: 1px 10px;
+            background-color: $lime;
+            margin: 20px 0 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+                color: $secondary;
+                font-weight: bold;
+                font-size: 0.75rem;
+                margin: 0;
+            }
+        }
+    }
+}
+
+//my code color
+//my code Ends
+//card ending
+//--->
+//media queries
+@media screen and (min-width: 600px) {
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: space-between;
+        gap: 3rem !important;
+        .card {
+            max-width: 500px;
+            margin: auto;
+        }
+    }
+}
+
+
+/* Tablet view :) */
+
+@media screen and (min-width: 700px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .navbar{
+        padding:0.5em 100px;
+    }
+    .team-area {
+        padding: 0 100px 50px;
+    }
+}
+
+// Desktop View
+@media screen and (min-width: 1200px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        gap: 3rem !important;
+    }
+}
+
+// Path: _event.scss
 @import 'footer';

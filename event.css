@@ -1,43 +1,48 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,500&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat";
-}
-
 body {
-  overflow-x: hidden;
+  background-color: #2D2F33;
 }
 
 .navbar {
-  background-color: #25262A !important;
-  border-bottom: 3px solid #65F3AC;
+  background-color: #25262a !important;
+  border-bottom: 3px solid #65f3ac;
+  padding: 0.5rem 50px;
+}
+.navbar .container-fluid {
+  padding: 0;
+}
+.navbar .navbar-toggler {
+  padding: 0;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
 }
 
 .navbar .navbar-nav .nav-link {
-  color: #FFF !important;
+  color: #fff;
 }
 
 .navbar .navbar-brand {
-  color: #FFF !important;
+  color: #fff !important;
   font-weight: 700;
   font-size: 1.8rem;
-  margin-left: 7%;
 }
 
 .navbar .navbar-brand::first-letter {
-  color: #65F3AC !important;
+  color: #65f3ac;
 }
 
 .navbar .navbar-nav .nav-link.active {
-  color: #65F3AC !important;
-  border-bottom: 3px solid #65F3AC;
+  color: #65f3ac;
+  font-weight: bold;
+  border-bottom: 3px solid #65f3ac;
 }
 
 .navbar .navbar-nav .nav-link {
-  margin-right: 1.6rem !important;
+  margin-right: 1.6rem;
+}
+
+.navbar .navbar-nav .nav-link.link-last {
+  margin-right: 0;
 }
 
 .navbar .navbar-toggler-icon {
@@ -45,57 +50,174 @@ body {
 }
 
 .navbar .navbar-toggler-icon:focus {
-  background-color: red !important;
+  background-color: red;
 }
 
-@media screen and (max-width: 768px) {
-  .navbar .navbar-nav .nav-link {
-    margin-left: 2em !important;
-  }
-}
-.event-section {
-  width: 100vw;
-  height: 100vh;
-  background-color: #2d2f33;
+.sub-nav {
   display: flex;
-  flex-direction: column;
-}
-.event-section .event-title-date {
-  height: 100px;
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
+  color: white;
   justify-content: space-between;
+  font-weight: 600;
+  margin: 30px auto;
   align-items: center;
 }
-.event-section .event-title-date h2 {
-  font-size: 1.75rem;
-  margin: 0;
-  color: #EAEAEA;
-  padding-left: 80px;
-}
-.event-section .event-title-date .event-title-years {
-  display: flex;
-  flex-direction: row;
-  color: #EAEAEA;
-  padding-right: 80px;
-  margin-bottom: 0;
-}
-.event-section .event-title-date .event-title-years li {
-  list-style: none;
-  margin: auto 10px;
-}
-.event-section .event-title-date .event-title-years li a {
-  font-size: 1.25rem;
-  text-decoration: none;
-  color: white;
-}
-.event-section .event-divs {
-  height: 100%;
-  width: 100%;
-  background-color: pink;
+
+.nav_head {
+  font-size: 20px;
 }
 
+.nav_head::after {
+  display: block;
+  content: " ";
+  border-radius: 12px;
+  width: 100%;
+  height: 3px;
+  background: #65F3AC;
+}
+
+.inner_head {
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: normal;
+}
+
+.inner_text {
+  margin: 0 3px;
+  cursor: pointer;
+}
+.inner_text:first-child {
+  margin-right: 20px;
+}
+.inner_text.active {
+  font-weight: bold !important;
+  color: #65F3AC !important;
+}
+
+.team-area {
+  padding: 0 50px 50px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-self: center;
+  row-gap: 3rem;
+}
+
+.card {
+  border-radius: 10px;
+  background: linear-gradient(#2D2F33, #2D2F33) padding-box, linear-gradient(135deg, grey, #2D2F33) border-box;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  color: #EAEAEA;
+  display: flex;
+  min-width: 300px;
+  flex-direction: column;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  justify-content: space-evenly;
+  padding: 30px 10%;
+  width: 100%;
+}
+.card:hover {
+  transition: all 0.5s ease;
+  box-shadow: 3px 3px 30px rgba(101, 243, 172, 0.1);
+}
+.card .card-img-cover {
+  height: 200px;
+  width: 100%;
+  background-color: #A2A4A3;
+  border-radius: 5px;
+}
+.card .card-img-cover img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+.card .event-content {
+  margin: 25px auto;
+  margin-bottom: 0;
+}
+.card .event-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+}
+.card .event-content h3:after {
+  position: absolute;
+  content: " ";
+  height: 3px;
+  width: 30%;
+  background-color: #65F3AC;
+  bottom: -5px;
+  left: 0;
+}
+.card .event-content p {
+  font-size: 1rem;
+  color: #bfbfbf;
+  font-weight: normal;
+  margin: 20px 0 0;
+  color: #A2A4A3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-height: 35px;
+  -webkit-box-orient: vertical;
+}
+.card .event-content .visit-button {
+  border-radius: 5px;
+  padding: 1px 10px;
+  background-color: #65F3AC;
+  margin: 20px 0 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .event-content .visit-button p {
+  color: #2D2F33;
+  font-weight: bold;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    gap: 3rem !important;
+  }
+  .card-container .card {
+    max-width: 500px;
+    margin: auto;
+  }
+}
+/* Tablet view :) */
+@media screen and (min-width: 700px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 980px) {
+  .navbar {
+    padding: 0.5em 100px;
+  }
+  .team-area {
+    padding: 0 100px 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: 3rem !important;
+  }
+}
 footer {
   height: 217px;
   width: 100%;
