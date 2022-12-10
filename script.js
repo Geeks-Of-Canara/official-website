@@ -81,3 +81,14 @@ btn4.addEventListener("click", (e) => {
     clearInterval(interval);
   }
 });
+
+
+var toggler = document.querySelector(".navbar-toggler")
+
+var navLinks = document.querySelectorAll(".nav-link")
+navLinks.forEach(nav=>{
+  nav.addEventListener("click",()=>{
+    console.log("clicked")
+    toggler.click();
+  })
+})
