@@ -37,6 +37,7 @@ const changeContent = function(id){
     }
 }
 
+
 btn1.addEventListener("click", (e) => {
   active.classList.remove("active");
   btn1.classList.add("active");
