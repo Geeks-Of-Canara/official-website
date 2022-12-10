@@ -10,14 +10,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="event.css">
+    <link rel="stylesheet" href="./dist/css/splide.min.css">
 </head>
 
 <body>
 
+
+    <div class="modal-container">
+        <button class="close-button">X</button>
+        <section class="modal-left splide" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+                  <ul class="splide__list">
+                      <li class="splide__slide">
+                        <img class="slide-img" src="./Images/hero-illustration.png" />
+                    </li>
+                    <li class="splide__slide">
+                          <img class="slide-img" src="./Images/hero-illustration.png" />
+                        </li>
+                        <li class="splide__slide">
+                          <img class="slide-img" src="./Images/hero-illustration.png" />
+                      </li>
+                  </ul>
+            </div>
+          </section>
+  
+        <div class="modal-right">
+          <div class="modal-heading-container">
+            <div class="modal-sub-heading">21-11-2022</div>
+            <h2 class="modal-heading">Git and Github workshop</h2>
+          </div>
+  
+          <div class="about-container">
+            <div class="modal-sub-heading about">About:</div>
+            <p class="modal-description">We are a Technical club of CEC aiming at Realizing the idea and Inspiring the next! We are a Technical club of CEC aiming at Realizing the idea and Inspiring the next! We are a Technical club of CEC aiming at Realizing the idea and Inspiring the next! </p>
+          </div>
+          
+          <div class="event-info-container">
+              <div class="event-info">Organized by:</div>
+              <div>Coding Club</div>
+              <div class="event-info">Resource person:</div>
+              <div>Karthik Prabhu</div>
+          </div>
+          <div class="button-container">
+            <button class="modal-button">
+              <span>Explore Our Team <img src="./Images/arrow.svg" alt="arrow"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+  
+    
    <!-- Nav bar -->
    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">GOC </a>
+      <a class="navbar-brand" href="index.html">GOC </a>
       <button
         class="navbar-toggler"
         type="button"
@@ -32,13 +78,13 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/">Home</a>
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/#our_club">Our Clubs</a>
+            <a class="nav-link" href="index.html#our_club">Our Clubs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/#goals">Goals</a>
+            <a class="nav-link" href="index.html#goals">Goals</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="/events.html">Events</a>
@@ -75,7 +121,7 @@
                     <div class="event-content">
                         <h3 class="event_title">Git and Github</h3>
                         <p class="event_content">My attractive, functional and easy to use UX/UI will attract your users attract your users</p>
-                        <button class="visit-button">
+                        <button class="visit-button" data-id="1">
                             <p>View more</p>
                         </button>
                     </div>
@@ -89,7 +135,7 @@
                     <div class="event-content">
                         <h3 class="event_title">Git and Github</h3>
                         <p class="event_content">My attractive, functional and easy to use UX/UI will attract your users attract your users</p>
-                        <button class="visit-button">
+                        <button class="visit-button" data-id="2">
                             <p>View more</p>
                         </button>
                     </div>
@@ -103,7 +149,7 @@
                     <div class="event-content">
                         <h3 class="event_title">Git and Github</h3>
                         <p class="event_content">My attractive, functional and easy to use UX/UI will attract your users attract your users</p>
-                        <button class="visit-button">
+                        <button class="visit-button" data-id="3">
                             <p>View more</p>
                         </button>
                     </div>
@@ -118,7 +164,7 @@
                     <div class="event-content">
                         <h3 class="event_title">Git and Github</h3>
                         <p class="event_content">My attractive, functional and easy to use UX/UI will attract your users attract your users</p>
-                        <button class="visit-button">
+                        <button class="visit-button" data-id="4">
                             <p>View more</p>
                         </button>
                     </div>
@@ -133,7 +179,7 @@
                     <div class="event-content">
                         <h3 class="event_title">Git and Github</h3>
                         <p class="event_content">My attractive, functional and easy to use UX/UI will attract your users attract your users</p>
-                        <button class="visit-button">
+                        <button class="visit-button" data-id="5">
                             <p>View more</p>
                         </button>
                     </div>
@@ -148,7 +194,7 @@
                     <div class="event-content">
                         <h3 class="event_title">Git and Github</h3>
                         <p class="event_content">My attractive, functional and easy to use UX/UI will attract your users attract your users</p>
-                        <button class="visit-button">
+                        <button class="visit-button" data-id="6">
                             <p>View more</p>
                         </button>
                     </div>
@@ -177,9 +223,9 @@
         </div>
         <div class="nav_links">
             <ul>
-                <li><a href="#" class="first_link">Home</a></li>
-                <li><a href="#">Clubs</a></li>
-                <li><a href="#">Goals</a></li>
+                <li><a href="index.html" class="first_link">Home</a></li>
+                <li><a href="index.html#our_club">Clubs</a></li>
+                <li><a href="index.html#goals">Goals</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="/team.html" class="last_link">Team</a></li>
             </ul>
@@ -189,8 +235,8 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
-
+    <script src="./dist//js/splide.min.js"></script>
+    <script src="./slider.js"></script>
 </body>
 
 </html>
