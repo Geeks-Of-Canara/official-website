@@ -16,6 +16,7 @@ $text: #a2a4a3;
 $primary: #25262a;
 $secondary: #2d2f33;
 $input: #2f3335;
+$error: #FF0000;
 
 // Scrollbar styling
 ::-webkit-scrollbar {
@@ -434,7 +435,7 @@ $input: #2f3335;
   border-radius: 12px;
   margin: 11px auto 42px;
 }
-//mobile friendly code - completed
+
 // Contact us Section
 .contact_us {
   background: $secondary;
@@ -472,6 +473,12 @@ $input: #2f3335;
       border-radius: 10px;
       border: 2px solid transparent;
 
+      span {
+        margin-bottom: 12px;
+        font-size: 14px;
+        color: red;
+      }
+
       .input {
         width: 100%;
         background-color: $input;
@@ -481,6 +488,7 @@ $input: #2f3335;
         border-radius: 5px;
         padding: 10px 15px;
         color: $grey;
+        resize: none;
       }
 
       .input:focus {
@@ -498,10 +506,14 @@ $input: #2f3335;
     .submit {
       margin: 30px auto 0;
     }
+
+    #submit-error {
+      font-size: 14px;
+      color: $error;
+    }
   }
 }
 
-//mobile friendly code - completed
 // Footer Section
 footer {
   background: $primary;

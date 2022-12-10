@@ -441,6 +441,11 @@
   border-radius: 10px;
   border: 2px solid transparent;
 }
+.contact_us .form .form_box span {
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: red;
+}
 .contact_us .form .form_box .input {
   width: 100%;
   background-color: #2f3335;
@@ -450,6 +455,7 @@
   border-radius: 5px;
   padding: 10px 15px;
   color: #e2e2e2;
+  resize: none;
 }
 .contact_us .form .form_box .input:focus {
   outline: 1.5px solid #65f3ac;
@@ -463,6 +469,10 @@
 }
 .contact_us .form .submit {
   margin: 30px auto 0;
+}
+.contact_us .form #submit-error {
+  font-size: 14px;
+  color: #FF0000;
 }
 
 footer {

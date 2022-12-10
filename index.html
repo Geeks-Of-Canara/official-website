@@ -367,22 +367,27 @@
             <div class="form_group">
                 <div class="form_box">
                     <label for="name">Name</label><br />
-                    <input type="text" class="input" id="name" placeholder=" Your name" />
+                    <input type="text" class="input" id="name" placeholder=" Your name" onkeyup="validateName()"/>
+                    <span id="name-error"></span>
                 </div>
                 <div class="form_box">
                     <label for="email">Email</label><br />
-                    <input type="email" class="input" id="email" placeholder=" Your email" />
+                    <input type="email" class="input" id="email" placeholder=" Your email" onkeyup="validateEmail()"/>
+                    <span id="email-error"></span>
                 </div>
             </div>
             <div class="form_box">
                 <label for="subject">Subject</label><br />
-                <input type="text" class="input" id="subject" placeholder=" Eg. Club Registration" />
+                <input type="text" class="input" id="subject" placeholder=" Eg. Club Registration" onkeyup="validateSubject()"/>
+                <span id="subject-error"></span>
             </div>
             <div class="form_box">
                 <label for="message">Message</label><br />
-                <textarea name="message" class="input" id="message" cols="30" rows="10" placeholder=" Type something here..."></textarea>
+                <textarea name="message" class="input" id="message" rows="5" placeholder=" Type something here..." onkeyup="validateMessage()"></textarea>
+                <span id="message-error"></span>
             </div>
-            <button class="submit button">
+            <span id="submit-error"></span>
+            <button class="submit button" onclick="return validateForm()" id="submit" >
           <span
             >Send the Message<img src="./Images/arrow.svg" class="arrow" alt="arrow"
           /></span>
@@ -394,7 +399,7 @@
     <footer>
         <div class="social_link">
             <a href="#" class="sm_container">
-                <div><img src="./Images/instagram.svg" alt="Instagram" /></div>
+                <div><img src="./Images/instagram.svg" alt="Instagram"/></div>
             </a href="#">
             <a href="#" class="sm_container">
                 <div><img src="./Images/facebook.svg" alt="Facebook" /></div>
