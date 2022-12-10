@@ -1,9 +1,16 @@
-// var type2 = document.getElementById("type2");
-// var typewriter = new Typewriter(type2, {
-//   loop: false,
-// });
+var type2 = document.getElementById("type2");
+var typewriter = new Typewriter(type2, {
+  loop: true,
+});
 
-// typewriter.typeString("Geeks Of Canara").start();
+typewriter.typeString("Geeks Of Canara").pauseFor(2500)
+.deleteAll()
+.typeString('Geeks Of Canara')
+.pauseFor(2500)
+.deleteAll()
+.typeString('Geeks Of Canara')
+.pauseFor(2500)
+.start();
 
 var btn1 = document.querySelector("#club_btn_1");
 var btn2 = document.querySelector("#club_btn_2");

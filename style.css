@@ -28,11 +28,136 @@
   color: #2d2f33;
 }
 
+.btn {
+  position: relative;
+  display: inline-block;
+  color: #000000;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #65f3ac;
+  padding: 10px 30px;
+  transition: 0.5s;
+  border: none;
+  border-radius: 0px;
+  box-shadow: 30px 30px 30px #2d2f33;
+}
+
+.btn:hover {
+  color: #65f3ac !important;
+  background-color: #2d2f33;
+  letter-spacing: 3px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 30px 30px 30px rgba(101, 243, 172, 0.04);
+}
+
+.btn span {
+  position: absolute;
+  display: block;
+  background-color: #65f3ac;
+}
+
+.btn span:nth-child(1) {
+  left: 0;
+  top: 0;
+  width: 50.5%;
+  height: 1.5px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.4s;
+}
+
+.btn:hover span:nth-child(1) {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+.btn span:nth-child(2) {
+  right: 0;
+  top: 0;
+  width: 50.5%;
+  height: 1.5px;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform 0.4s;
+}
+
+.btn:hover span:nth-child(2) {
+  transform: scaleY(1);
+  transform-origin: left;
+}
+
+.btn span:nth-child(3) {
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 1.5px;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: transform 0.4s;
+  transition-delay: 0.4s;
+}
+
+.btn:hover span:nth-child(3) {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.btn span:nth-child(4) {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 1.5px;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: transform 0.4s;
+  transition-delay: 0.4s;
+}
+
+.btn:hover span:nth-child(4) {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.btn span:nth-child(5) {
+  left: 0;
+  bottom: 0;
+  width: 50.5%;
+  height: 1.5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.4s;
+  transition-delay: 0.8s;
+}
+
+.btn:hover span:nth-child(5) {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.btn span:nth-child(6) {
+  right: 0;
+  bottom: 0;
+  width: 50.5%;
+  height: 1.5px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.4s;
+  transition-delay: 0.8s;
+}
+
+.btn:hover span:nth-child(6) {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
 .button {
   background: #65f3ac;
   border: none;
   padding: 10px 24px;
   font-size: 16px;
+  text-decoration: none;
+  color: #25262a;
   font-family: "Montserrat" !important;
   font-weight: 600;
   border-radius: 3px;
@@ -41,6 +166,7 @@
 }
 .button:hover {
   cursor: pointer;
+  color: #25262a;
 }
 .button .arrow {
   margin-left: 10px;
