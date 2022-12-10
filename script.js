@@ -83,22 +83,12 @@ btn4.addEventListener("click", (e) => {
 });
 
 
+var toggler = document.querySelector(".navbar-toggler")
 
-// modal
-
-
-var mbtn=document.querySelector('.view-more');
-var modal = document.querySelector('.modal');
-var close = document.querySelector('.close');
-
-
-mbtn.addEventListener('click',()=>
-{
-    modal.style.display="flex";
+var navLinks = document.querySelectorAll(".nav-link")
+navLinks.forEach(nav=>{
+  nav.addEventListener("click",()=>{
+    console.log("clicked")
+    toggler.click();
+  })
 })
-
-close.addEventListener('click',()=>
-{
-  modal.style.display="none";
-})
-

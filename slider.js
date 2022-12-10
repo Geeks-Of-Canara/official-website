@@ -4,7 +4,11 @@ const trigger = document.querySelectorAll(".visit-button");
 const closeButton = document.querySelector(".close-button");
 
 function toggleModal(e) {
-    console.log(e.currentTarget.getAttribute('data-id'))
+    var id = e.currentTarget.getAttribute("data-id");
+    if(id)
+        load(`http://152.67.1.27:3000/event/${id}`,"get",(event)=>{
+            console.log(event)
+        })
     modal.classList.toggle("show-modal-container");
 }
 // const flag=false;
@@ -15,10 +19,11 @@ function toggleModal(e) {
 //         // flag=!flag;
 //     }
 // }
-trigger.forEach(t=>{
-    t.addEventListener("click", (e)=>toggleModal(e));
 
-})
+// trigger.forEach(t=>{
+//     t.addEventListener("click", (e)=>toggleModal(e));
+
+// })
 closeButton.addEventListener("click", (e)=>toggleModal(e));
 // if(modal.classList=="show-modal"){
 //     body.addEventListener("click", toggleModal);
