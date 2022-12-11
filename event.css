@@ -380,8 +380,6 @@ body {
   }
 }
 footer {
-  position: -webkit-sticky;
-  position: sticky;
   width: 100%;
   max-width: 100%;
   background: #25262A;
