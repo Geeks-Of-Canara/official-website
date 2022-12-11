@@ -80,7 +80,7 @@ body {
 }
 
 .card:hover {
-  transition: all 2s ease;
+  transition: all 0.1s ease;
   transform: scale(1.03);
   box-shadow: -0.5px -0.5px 0.5px rgba(255, 255, 255, 0.25), 5px 5px 20px rgba(255, 255, 255, 0.1);
 }
@@ -90,7 +90,9 @@ body {
 }
 
 .card-img {
+  max-height: 16rem;
   width: 100%;
+
   display: block;
   margin: 0 auto 20px;
   border-radius: 5px;

@@ -380,6 +380,8 @@ body {
   }
 }
 footer {
+  width: 100%;
+  max-width: 100%;
   background: #25262A;
 }
 footer .social_link {
