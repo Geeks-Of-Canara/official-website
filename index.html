@@ -253,7 +253,7 @@
          <div class="whatwedo_container">
     
   
-            <div class="card">
+            <div class="card gs_reveal_fromLeft gs_reveal">
                 <div class="card-content">
                     <div class="card-heading-container">
                         <h3 class="card-heading">
@@ -349,45 +349,33 @@
       <form action="" method="" class="form" autocomplete="off">
         <div class="form_group gs_reveal_fromBottom gs_reveal">
             <div class="form_box">
-              <label for="name">Name</label><br />
-              <input type="text" class="input" id="name" placeholder=" Your name" />
+                <label for="name">Name</label><br />
+                <input type="text" class="input" id="name" placeholder=" Your name" onkeyup="validateName()"/>
+                <span class="input-error" id="name-error"></span>
             </div>
             <div class="form_box">
-              <label for="email">Email</label><br />
-              <input
-                type="email"
-                class="input"
-                id="email"
-                placeholder=" Your email"
-              />
+                <label for="email">Email</label><br />
+                <input type="email" class="input" id="email" placeholder=" Your email" onkeyup="validateEmail()"/>
+                <span class="input-error" id="email-error"></span>
             </div>
         </div>
         <div class="form_box gs_reveal_fromBottom gs_reveal">
-          <label for="subject">Subject</label><br />
-          <input
-            type="text"
-            class="input"
-            id="subject"
-            placeholder=" Eg. Club Registration"
-          />
+            <label for="subject">Subject</label><br />
+            <input type="text" class="input" id="subject" placeholder=" Eg. Club Registration" onkeyup="validateSubject()"/>
+            <span class="input-error" id="subject-error"></span>
         </div>
         <div class="form_box gs_reveal_fromBottom gs_reveal">
-          <label for="message">Message</label><br />
-          <textarea
-            name="message"
-            class="input"
-            id="message"
-            cols="30"
-            rows="10"
-            placeholder=" Type something here..."
-          ></textarea>
+            <label for="message">Message</label><br />
+            <textarea name="message" class="input" id="message" rows="5" placeholder=" Type something here..." onkeyup="validateMessage()"></textarea>
+            <span class="input-error" id="message-error"></span>
         </div>
-        <button class="submit button gs_reveal_fromBottom gs_reveal">
-          <span
-            >Send the Message<img src="./Images/arrow.svg" class="arrow" alt="arrow"
-          /></span>
-        </button>
-      </form>
+        <span class="input-error" id="submit-error"></span>
+        <button class="submit button gs_reveal_fromBottom gs_reveal" onclick="validateForm(event)" id="submit" >
+      <span
+        >Send the Message<img src="./Images/arrow.svg" class="arrow" alt="arrow"
+      /></span>
+    </button>
+    </form>
     </section>
 
     <!-- Footer Section -->
@@ -437,7 +425,6 @@
         <script src="./script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-    <script src="stagger.js">
     </script>
     <script src="scrolltrigger.js"></script>
     <script>

@@ -92,3 +92,117 @@ navLinks.forEach(nav=>{
     toggler.click();
   })
 })
+
+// Contact us - Form validation
+const nameError = document.getElementById('name-error');
+const emailError = document.getElementById('email-error');
+const subjectError = document.getElementById('subject-error');
+const messageError = document.getElementById('message-error');
+const submitError = document.getElementById('submit-error');
+var submit=document.getElementById('submit');
+
+function validateName(){
+  var name = document.getElementById('name').value;
+  
+  if(name.length==0){
+    nameError.innerHTML="Name field required !";
+    return false;
+  }
+  if(!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*/) || name.length<3){
+    nameError.innerHTML="Enter full name !";
+    return false;
+  }
+  nameError.innerHTML="";
+  submit.disabled=false;
+  submitError.innerHTML= "";
+  return true;
+} 
+
+function validateEmail(){
+  var email=document.getElementById('email').value;
+
+  if(email.length==0){
+    emailError.innerHTML="Email field required !";
+    return false;
+  }
+  if(!email.match(/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/)){
+    emailError.innerHTML="Invalid email !";
+    return false;
+  }
+  emailError.innerHTML="";
+  submit.disabled=false;
+  submitError.innerHTML= "";
+  return true;
+}
+
+function validateSubject(){
+  var subject=document.getElementById('subject').value;
+
+  if(subject.length==0){
+    subjectError.innerHTML="Subject field required !";
+    return false;
+  }
+  if(subject.match(/^[A-Za-z0-9]*\s{1}[A-Za-z0-9]*$/)){
+    subjectError.innerHTML="Invalid subject !";
+    return false;
+  }
+  subjectError.innerHTML="";
+  submit.disabled=false;
+  submitError.innerHTML= "";
+  return true;
+}
+
+function validateMessage(){
+  var message=document.getElementById('message').value;
+  var required=30;
+  var remaining=required - message.length;
+  
+  if(message.length==0){
+    messageError.innerHTML="Message field required !";
+    return false;
+  }
+  if(remaining>0){
+    messageError.innerHTML= remaining+" more characters required !";
+    return false;
+  }
+  messageError.innerHTML="";
+  submit.disabled=false;
+  submitError.innerHTML= "";
+  return true;
+}
+
+function validateForm(e){
+  e.preventDefault();
+  nameError.innerHTML = "";
+  emailError.innerHTML = "";
+  subjectError.innerHTML = "";
+  messageError.innerHTML = "";
+  flag=false;
+
+  if(validateName()||validateEmail()||validateSubject()||validateMessage()){
+    submitError.innerHTML= "";
+    flag=true;
+  }
+  if(!validateName()||!validateEmail()||!validateSubject()||!validateMessage()){
+    submitError.innerHTML= " Please fill in the required fields";
+    if(!validateName()){
+      nameError.innerHTML="Name field required !";
+      submitError.innerHTML= " Please fill in the required fields";
+    }
+    if(!validateEmail()){
+      emailError.innerHTML="Email field required !";
+      submitError.innerHTML= " Please fill in the required fields";
+    }
+    if(!validateSubject()){
+      subjectError.innerHTML="Subject field required !";
+      submitError.innerHTML= " Please fill in the required fields";
+    }
+    if(!validateMessage()){
+      messageError.innerHTML="Message field required !";
+      submitError.innerHTML= " Please fill in the required fields";
+    }
+  }
+  if(flag) console.log("valid form") 
+  else console.log("Invalid form")
+  submitError.innerHTML= "";
+}
