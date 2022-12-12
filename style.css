@@ -590,6 +590,12 @@
 .contact_us .form .submit {
   margin: 30px auto 0;
 }
+.contact_us .form .input-error {
+  font-size: 14px;
+  color: #e05a5a;
+  display: block;
+  margin-top: 10px;
+}
 
 footer {
   background: #25262a;
