@@ -69,20 +69,18 @@ body {
   color: white;
   display: flex;
   flex-direction: column;
-  justify-self: center;
   font-family: Montserrat;
   font-size: 20px;
   font-weight: 600;
   justify-content: space-evenly;
   padding: 25px 20px;
   margin-bottom: 0;
-  width: 85%;
-  height: 28rem;
-  transition: transform 0.1s ease;
+  width: 100%;
+  transition: transform 0.1s ease-out;
 }
 
 .card:hover {
-  transition: all 0.1s ease;
+  transition: all 2s ease;
   transform: scale(1.03);
   box-shadow: -0.5px -0.5px 0.5px rgba(255, 255, 255, 0.25), 5px 5px 20px rgba(255, 255, 255, 0.1);
 }
@@ -92,8 +90,6 @@ body {
 }
 
 .card-img {
-  height: 15rem;
-  max-height: 16rem;
   width: 100%;
   display: block;
   margin: 0 auto 20px;
@@ -123,53 +119,11 @@ body {
   transition: transform 0.1s;
 }
 
-
-/* preloader */
-#preloader
-{
-background:rgb(255, 255, 255) url(./Images/loader.gif) no-repeat center center;
-position: fixed;
-background-size:100%;
-height: 100%;
-width: 100%;
-z-index: 100;
-animation-name: fade;
-}
-
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 4.3s;
-  animation-name: fade;
-  animation-duration: 4.3s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: 0}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: 0}
-  to {opacity: 1}
-}
-
-/* ------ */
-
-
-
-
 /* large phone view :) */
 @media screen and (min-width: 600px) {
   .card-container {
     justify-content: space-between;
     gap: 20px;
-  }
-
-  .card
-  {
-    width: 95% !important;
   }
 }
 /* Tablet view :) */
