@@ -6,6 +6,18 @@
   box-sizing: border-box;
 }
 
+/* preloader */
+#preloader
+{
+background:rgb(255, 255, 255) url(./Images/loader.gif) no-repeat center center;
+position: fixed;
+background-size:100%;
+height: 100vh;
+width: 100%;
+z-index: 100;
+animation-name: fade;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
