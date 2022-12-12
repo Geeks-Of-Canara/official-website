@@ -28,6 +28,39 @@
   color: #2d2f33;
 }
 
+/* preloader */
+#preloader
+{
+background:rgb(255, 255, 255) url(./Images/loader.gif) no-repeat center center;
+position: fixed;
+background-size:100%;
+height: 100%;
+width: 100%;
+z-index: 100;
+animation-name: fade;
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 7s;
+  animation-name: fade;
+  animation-duration: 7s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+/* ------ */
+
 .btn {
   position: relative;
   display: inline-block;
