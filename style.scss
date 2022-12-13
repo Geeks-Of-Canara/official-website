@@ -421,6 +421,11 @@ $error: #e05a5a;
       background-color: $lime;
       border-radius: 50%;
       color: #25262a;
+
+      img{
+        width: 20px;
+        height: 20px;
+      }
     }
     .card-description {
       font-weight: normal;
@@ -479,6 +484,11 @@ $error: #e05a5a;
       border-radius: 50%;
       display: none;
       background-color: $lime;
+
+      img{
+        width: 22px;
+        height: 22px;
+      }
     }
     .club_name{
         font-size: 14px;

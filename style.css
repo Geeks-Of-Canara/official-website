@@ -6,18 +6,6 @@
   box-sizing: border-box;
 }
 
-/* preloader */
-#preloader
-{
-background:rgb(255, 255, 255) url(./Images/loader.gif) no-repeat center center;
-position: fixed;
-background-size:100%;
-height: 100vh;
-width: 100%;
-z-index: 100;
-animation-name: fade;
-}
-
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -405,6 +393,10 @@ animation-name: fade;
   border-radius: 50%;
   color: #25262a;
 }
+.card .card-content .circle img {
+  width: 20px;
+  height: 20px;
+}
 .card .card-content .card-description {
   font-weight: normal;
   color: #bfbfbf;
@@ -460,6 +452,10 @@ animation-name: fade;
   border-radius: 50%;
   display: none;
   background-color: #65f3ac;
+}
+.our_club .club_button .club_icon img {
+  width: 22px;
+  height: 22px;
 }
 .our_club .club_button .club_name {
   font-size: 14px;
