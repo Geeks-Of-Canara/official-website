@@ -323,6 +323,41 @@ $error: #e05a5a;
   }
 }
 
+// preloader
+#preloader
+{
+background:rgb(255, 255, 255) url(./Images/loader.gif) no-repeat center center;
+position: fixed;
+background-size:100%;
+height: 100vh;
+width: 100%;
+z-index: 100;
+
+animation-name: fade;
+}
+
+
+// --
+
+ /* Fading animation */
+ .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+
 // change navbar color
 .navbar .navbar-nav .nav-link {
   color: #fff;
