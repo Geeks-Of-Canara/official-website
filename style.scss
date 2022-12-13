@@ -360,6 +360,7 @@ animation-name: fade;
 
 // change navbar color
 .navbar .navbar-nav .nav-link {
+ 
   color: #fff;
 }
 
@@ -400,6 +401,19 @@ animation-name: fade;
 .navbar .navbar-toggler-icon:focus {
   background-color: red;
 }
+
+.meet
+{
+  color: #a2a4a3;
+  text-decoration: none;
+  &:hover
+  {
+    color: #65f3ac;
+    text-decoration: none;
+  }
+}
+
+
 
 // Our clubs section
 

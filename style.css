@@ -373,6 +373,15 @@
   background-color: red;
 }
 
+.meet {
+  color: #a2a4a3;
+  text-decoration: none;
+}
+.meet:hover {
+  color: #65f3ac;
+  text-decoration: none;
+}
+
 .card {
   border-radius: 10px;
   background: linear-gradient(#2d2f33, #2d2f33) padding-box, linear-gradient(135deg, grey, #2d2f33) border-box;

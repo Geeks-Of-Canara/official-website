@@ -17,11 +17,11 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <div id="preloader"></div>
+ 
   <body>
-    
+    <div id="preloader"></div>
     <!-- Nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav id="nav">
         <div class="container-fluid">
           <a class="navbar-brand" href="/index.html">GOC </a>
           <button
@@ -404,7 +404,8 @@
         </ul>
       </div>
       <div class="copyright">
-      <p class="first_link"><a href="/developers.html" >Meet The Team</a></p>
+        <p><span>&copy;</span> GeeksofCanara <span>2022</span><span> ~ </span><a href="/developers.html"  class="meet">Meet The Team</a></p>
+    
       </div>
       
     </footer>
@@ -421,7 +422,10 @@
 
     <script>
       pre = document.getElementById('preloader');
+     
       window.addEventListener("load", setTimeout(function () {
+        
+        document.getElementById('nav').className = 'navbar navbar-expand-lg navbar-light bg-light sticky-top'
           pre.style.display = 'none';
       }, 4300));
   
