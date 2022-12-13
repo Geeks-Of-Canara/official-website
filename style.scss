@@ -440,6 +440,11 @@ animation-name: fade;
   .card-img {
     width: 100%;
     background-color: $input;
+    img{
+      width:100%;
+      object-fit: contain;;
+      background-position: center center;
+    }
   }
   .card-content {
     margin: 15px 0 0;
@@ -588,9 +593,6 @@ animation-name: fade;
     background-color: $lime;
     border-radius: 12px;
     margin: 11px auto 42px;
-  }
-  .card-img {
-    min-height: 250px;
   }
 }
 
