@@ -19,8 +19,15 @@
   </head>
  
   <body>
+
     <div id="preloader"></div>
     <!-- Nav bar -->
+    <div class="inauguration-main">
+      <div class="in_container">
+        <button class="inaugurate">Click to Launch</button>
+      </div>
+    </div>
+    <canvas class="confetti" id="canvas"></canvas> 
     <nav id="nav">
         <div class="container-fluid">
           <a class="navbar-brand" href="/index.html">GOC </a>
@@ -423,11 +430,11 @@
     <script>
       pre = document.getElementById('preloader');
      
-      window.addEventListener("load", setTimeout(function () {
-        
+      setTimeout(function () {
         document.getElementById('nav').className = 'navbar navbar-expand-lg navbar-light bg-light sticky-top'
           pre.style.display = 'none';
-      }, 4300));
+          document.querySelector('.inauguration-main').style.display = 'flex';
+      }, 4300)
   
   </script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
@@ -437,6 +444,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     </script>
     <script src="scrolltrigger.js"></script>
-
+    <script src="d3.js"></script>
+    <script src="confetti.js"></script>
   </body>
 </html>

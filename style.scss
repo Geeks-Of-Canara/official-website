@@ -36,7 +36,80 @@ $error: #e05a5a;
 
 
 
+// Inauguration
 
+.inauguration-main{
+  position: fixed;
+  background-color: $secondary;
+  z-index: 5001;
+  left:0;
+  top:0;
+height: 100vh;
+display: none;
+padding:0;
+width: 100vw;
+flex-direction: column-reverse;
+justify-content: center;
+align-items: center;
+}
+
+.confetti{
+  position:fixed;
+  left:0;
+  top:0;
+  z-index: 1021;
+  width:100vw;
+  height: 100vh;
+    display: block;
+    margin: 0 auto;
+    user-select: none;
+}    
+
+
+
+.in_container {
+display: flex;
+padding:0;
+z-index: 11;
+flex-direction: column-reverse;
+
+}
+
+.in_container svg{
+display: none;
+}
+
+.path--background {
+fill: transparent !important;
+/* stroke:#65f3ac; */
+}
+
+.path--foreground {
+fill: #65f3ac;
+}
+
+.label {
+font: 90px "Open Sans";
+font-weight: 900;
+text-anchor: middle;
+fill: #65f3ac;
+font-size: 4rem;
+}
+
+.inaugurate{
+padding:15px 30px;
+border: 2px solid #65f3ac;
+background:transparent;
+color:#65f3ac;
+font-weight: bold;
+transition: 0.5s;
+border-radius: 5px;
+}
+
+.inaugurate:hover{
+background-color: #65f3ac;
+color:#25262a;
+}
 
 
 // Hero Section
@@ -326,14 +399,14 @@ $error: #e05a5a;
 // preloader
 #preloader
 {
-background:rgb(255, 255, 255) url(./Images/loader.gif) no-repeat center center;
-position: fixed;
-background-size:100%;
-height: 100vh;
-width: 100%;
-z-index: 100;
-
-animation-name: fade;
+  background: rgb(255, 255, 255) url(./Images/loader.gif) no-repeat center center;
+  position: fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  -webkit-animation-name: fade;
+  animation-name: fade;
 }
 
 
