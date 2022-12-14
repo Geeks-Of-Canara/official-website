@@ -10,6 +10,9 @@ p,a,h1,h2,h3,h4 {
 	padding: 0;
 }
 
+h3{
+  font-size: 1.5rem;
+}
 
 /* nav */
 .navbar {
@@ -83,6 +86,10 @@ p,a,h1,h2,h3,h4 {
 	margin-bottom: 50px;
 }
 
+.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top.align-items-end{
+  background-color: #25262a !important;
+}
+
 .section-team .header-section .small-title {
     margin-bottom: 25px;
 	font-size: 16px;
@@ -92,12 +99,10 @@ p,a,h1,h2,h3,h4 {
 
 .section-team .header-section .title {
     font-weight: 700;
-    font-size: 45px;
 }
 
 .section-team .single-person {
     cursor: pointer;
-    height: 25rem;
 	margin-top: 30px;
 	padding: 30px;
   
@@ -152,8 +157,6 @@ p,a,h1,h2,h3,h4 {
 
 .section-team .single-person .person-info .full-name {
 	margin-bottom: 10px;
-	font-size: 28px;
-    font-weight: 700;
 }
 
 .section-team .single-person .person-info .speciality {
