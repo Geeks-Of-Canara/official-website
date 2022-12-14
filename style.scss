@@ -60,7 +60,8 @@ align-items: center;
   z-index: 1021;
   width:100vw;
   height: 100vh;
-    display: block;
+    // display: block;
+    display: none;
     margin: 0 auto;
     user-select: none;
 }    
@@ -585,6 +586,11 @@ color:#25262a;
   .club_navigator{
     margin: 0 0 30px;
   }
+
+  .desktop{
+    display: none;
+  }
+
   .club_button {
     border-radius: 10px;
     background: linear-gradient(#2d2f33, #2d2f33) padding-box,
@@ -930,6 +936,15 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 40px;
+  }
+  .our_club{
+    .desktop{
+      display: block;
+    }
+    .mobile{
+      display: none;
+    }
+
   }
   
 }
