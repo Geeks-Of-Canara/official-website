@@ -756,6 +756,9 @@
   color: #e2e2e2;
   text-align: center;
 }
+.contact_us #message {
+  resize: none;
+}
 .contact_us .form {
   max-width: 768px;
   margin: 0 auto;
