@@ -10,7 +10,7 @@ function load(url,method,callback) {
     xhttp.send();
   }
   
-load("http://152.67.1.27:3000/allEvents","get",(value)=>{
+load("https://muvdb.tk/allEvents","get",(value)=>{
 list = JSON.parse(value);
 var cardContainer = document.querySelector(".card-container");
 var cards = "";
