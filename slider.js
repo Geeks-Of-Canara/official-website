@@ -1,15 +1,31 @@
 const modal = document.querySelector(".modal-container");
 const trigger = document.querySelectorAll(".visit-button");
-
 const closeButton = document.querySelector(".close-button");
+
+const eventDate = document.querySelector('#event-data-date')
+const eventTitle = document.querySelector('#event-data-title')
+const eventDesc = document.querySelector('#event-data-description')
+const eventClub = document.querySelector('#event-data-club')
+const eventRp = document.querySelector('#event-data-rp')
+const slideImage = document.querySelector('.slide-img')
 
 function toggleModal(e) {
     var id = e.currentTarget.getAttribute("data-id");
     if(id)
-        load(`http://152.67.1.27:3000/event/${id}`,"get",(event)=>{
-            console.log(event)
+        load(`https://muvdb.tk/event/${id}`,"get",(data)=>{
+            data = JSON.parse(data).event
+            eventDate.textContent = new Date(data.date).toLocaleDateString();
+            eventTitle.textContent = data.title;
+            eventDesc.textContent = data.description;
+            eventClub.textContent = data.club;
+            eventRp.textContent = data.organizer;
+            slideImage.src = data.posterImg;
+            modal.classList.toggle("show-modal-container");
         })
-    modal.classList.toggle("show-modal-container");
+    else{
+        modal.classList.toggle("show-modal-container");
+    }
+        
 }
 // const flag=false;
 
@@ -32,11 +48,11 @@ closeButton.addEventListener("click", (e)=>toggleModal(e));
 // window.addEventListener("click", (windowOnClick));
 
 
-document.addEventListener( 'DOMContentLoaded', function() {
-    var splide = new Splide( '.splide', {
-    type    : 'loop',
-    perPage : 1,
-    autoplay: true,
-    } );
-  splide.mount();
-} );
+// document.addEventListener( 'DOMContentLoaded', function() {
+//     var splide = new Splide( '.splide', {
+//     type    : 'loop',
+//     perPage : 1,
+//     autoplay: true,
+//     } );
+//   splide.mount();
+// } );

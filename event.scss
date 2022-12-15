@@ -163,10 +163,10 @@ body {
   .modal-button{
     background: #65f3ac;
       border: none;
-      padding: 10px 24px;
+      padding: 8px 24px;
+      font-weight: 500;
       font-size: 14px 24px;
       font-family: "Montserrat" !important;
-      font-weight: 600;
       border-radius: 3px;
       display: flex;
       margin-top: 30px;
@@ -300,6 +300,12 @@ body {
     row-gap: 3rem;
 }
 
+.events-area{
+  .card-container{
+    display: grid;
+  }
+}
+
 .card {
     border-radius: 10px;
     background: linear-gradient($secondary, $secondary) padding-box, linear-gradient(135deg, grey, $secondary) border-box;
@@ -382,7 +388,7 @@ body {
     .card-container {
         grid-template-columns: repeat(1, 1fr);
         justify-content: space-between;
-        gap: 3rem !important;
+        gap: 3rem;
         .card {
             max-width: 500px;
             margin: auto;
