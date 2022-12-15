@@ -159,10 +159,13 @@ body {
 }
 
 .card-container {
-  display: grid;
+  display: none;
   grid-template-columns: 1fr;
   justify-self: center;
   gap: 5em;
+}
+.card-container.active {
+  display: grid;
 }
 
 .card {
@@ -216,7 +219,7 @@ body {
 }
 
 .club_title {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   color: #65F3AC;
 }

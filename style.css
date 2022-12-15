@@ -123,7 +123,7 @@
   z-index: 1021;
   width: 100vw;
   height: 100vh;
-  display: block;
+  display: none;
   margin: 0 auto;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -623,6 +623,9 @@
 .our_club .club_navigator {
   margin: 0 0 30px;
 }
+.our_club .desktop {
+  display: none;
+}
 .our_club .club_button {
   border-radius: 10px;
   background: linear-gradient(#2d2f33, #2d2f33) padding-box, linear-gradient(135deg, grey, #2d2f33) border-box;
@@ -937,6 +940,12 @@ footer .copyright span {
     grid-template-columns: repeat(2, 1fr);
     -moz-column-gap: 40px;
          column-gap: 40px;
+  }
+  .our_club .desktop {
+    display: block;
+  }
+  .our_club .mobile {
+    display: none;
   }
 }
 @media screen and (min-width: 980px) {

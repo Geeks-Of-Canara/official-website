@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="event.css">
     <link rel="stylesheet" href="./dist/css/splide.min.css">
+    <link rel="stylesheet" href="team.css">
 </head>
 
 <body>
@@ -97,6 +98,7 @@
     </div>
   </nav>
   <!-- Nav bar end -->
+  <div class="loader-parent"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>
 
     <!-- Event Section Begin-->
     <div class="team-area">
@@ -151,6 +153,14 @@
     <script src="./dist//js/splide.min.js"></script>
     <script src="./events.js"></script>
     <script src="./slider.js"></script>
+    <script>
+      pre = document.getElementsByClassName('loader-parent');
+      nav = document.querySelector('.navbar');
+      window.addEventListener("load", setTimeout(function () {
+        nav.style.display="flex";
+          pre[0].style.display = 'none';
+      }, 2000))
+    </script>
 </body>
 
 </html>
