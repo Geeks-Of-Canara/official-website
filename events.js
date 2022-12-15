@@ -10,7 +10,7 @@ function load(url,method,callback) {
     xhttp.send();
   }
   
-load("https://sandesh-backend.vercel.app/","get",(value)=>{
+load("http://152.67.1.27:3000/allEvents","get",(value)=>{
 list = JSON.parse(value);
 var cardContainer = document.querySelector(".card-container");
 var cards = "";

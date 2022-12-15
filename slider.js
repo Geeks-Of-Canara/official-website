@@ -12,7 +12,7 @@ const slideImage = document.querySelector('.slide-img')
 function toggleModal(e) {
     var id = e.currentTarget.getAttribute("data-id");
     if(id)
-        load(`https://sandesh-backend.vercel.app/${id}`,"get",(data)=>{
+        load(`http://152.67.1.27:3000/event/${id}`,"get",(data)=>{
             data = JSON.parse(data).event
             eventDate.textContent = new Date(data.date).toLocaleDateString();
             eventTitle.textContent = data.title;
