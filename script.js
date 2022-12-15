@@ -172,7 +172,6 @@ function validateMessage(){
 }
 
 function validateForm(e){
-  e.preventDefault();
   nameError.innerHTML = "";
   emailError.innerHTML = "";
   subjectError.innerHTML = "";
@@ -183,7 +182,7 @@ function validateForm(e){
     submitError.innerHTML= "";
     flag=true;
   }
-  if(!validateName()||!validateEmail()||!validateSubject()||!validateMessage()){
+  else if(!validateName()||!validateEmail()||!validateSubject()||!validateMessage()){
     submitError.innerHTML= " Please fill in the required fields";
     if(!validateName()){
       nameError.innerHTML="Name field required !";
@@ -202,9 +201,8 @@ function validateForm(e){
       submitError.innerHTML= " Please fill in the required fields";
     }
   }
-  if(flag) console.log("valid form") 
-  else console.log("Invalid form")
-  submitError.innerHTML= "";
+
+  return flag;
 }
 
 

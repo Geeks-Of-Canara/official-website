@@ -476,33 +476,33 @@
   <section class="contact_us">
     <h2 class="contact_heading">Contact Us</h2>
     <div class="underline"></div>
-    <form action="" method="" class="form" autocomplete="off">
+    <form action="https://formsubmit.co/technicalclubcec@gmail.com" method="post" class="form" autocomplete="off" onsubmit="return validateForm(event)" target="_blank">
       <div class="form_group gs_reveal_fromBottom gs_reveal">
         <div class="form_box">
           <label for="name">Name</label><br />
-          <input type="text" class="input" id="name" placeholder=" Your name" onkeyup="validateName()" />
+          <input type="text" name="name" class="input" id="name" placeholder=" Your name" onkeyup="validateName()" />
           <span class="input-error" id="name-error"></span>
         </div>
         <div class="form_box">
           <label for="email">Email</label><br />
-          <input type="email" class="input" id="email" placeholder=" Your email" onkeyup="validateEmail()" />
+          <input type="email" name="email" class="input" id="email" placeholder=" Your email" onkeyup="validateEmail()" />
           <span class="input-error" id="email-error"></span>
         </div>
       </div>
       <div class="form_box gs_reveal_fromBottom gs_reveal">
         <label for="subject">Subject</label><br />
-        <input type="text" class="input" id="subject" placeholder=" Eg. Club Registration"
+        <input type="text" name="subject" class="input" id="subject" placeholder=" Eg. Club Registration"
           onkeyup="validateSubject()" />
         <span class="input-error" id="subject-error"></span>
       </div>
       <div class="form_box gs_reveal_fromBottom gs_reveal">
         <label for="message">Message</label><br />
-        <textarea name="message" class="input" id="message" rows="5" placeholder=" Type something here..."
+        <textarea name="message" name="message" class="input" id="message" rows="5" placeholder=" Type something here..."
           onkeyup="validateMessage()"></textarea>
         <span class="input-error" id="message-error"></span>
       </div>
       <span class="input-error" id="submit-error"></span>
-      <button class="submit button gs_reveal_fromBottom gs_reveal" onclick="validateForm(event)" id="submit">
+      <button type="submit" class="submit button gs_reveal_fromBottom gs_reveal" id="submit">
         <span>Send the Message<img src="./Images/arrow.svg" class="arrow" alt="arrow" /></span>
       </button>
     </form>

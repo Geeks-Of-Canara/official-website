@@ -144,7 +144,7 @@ window.addEventListener('resize', function () {
 var width = 550,
   height = 400,
   timePassed = 0,
-  timeLimit = 10;
+  timeLimit = 1;
 
 var fields = [{
   value: timeLimit,
