@@ -50,7 +50,7 @@
   z-index: 1021;
   width: 100vw;
   height: 100vh;
-  display: none;
+  display: block;
   margin: 0 auto;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -652,6 +652,13 @@
 }
 .what_we_do .card .card-content {
   margin: 0;
+}
+.what_we_do .card .card-heading-container {
+  margin-bottom: 10px;
+}
+.what_we_do .card .card-description {
+  overflow: unset;
+  display: unset;
 }
 
 .underline {

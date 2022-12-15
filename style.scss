@@ -60,8 +60,8 @@ align-items: center;
   z-index: 1021;
   width:100vw;
   height: 100vh;
-    // display: block;
-    display: none;
+    display: block;
+    // display: none;
     margin: 0 auto;
     user-select: none;
 }    
@@ -694,6 +694,13 @@ color:#25262a;
     padding: 30px;
     .card-content {
       margin: 0;
+    }
+    .card-heading-container{
+      margin-bottom: 10px;
+    }
+    .card-description{
+        overflow: unset; 
+        display: unset;
     }
   }
 }
