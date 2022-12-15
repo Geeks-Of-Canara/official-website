@@ -8,6 +8,86 @@
 }
 
 
+.vmcard {
+  display: none;
+  color: white;
+  width: 75%;
+  height: 70%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: 2px solid silver;
+  z-index: 3;
+  backdrop-filter: blur(10px);
+}
+
+.vmcard-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+.vmcard-title {
+  display: flex;
+  justify-content: center;
+  margin: 3% 0;
+}
+
+.vmcard-text {
+  font-size: 25px;
+  margin: 30px;
+  text-align: justify;
+}
+
+// div
+.vmbttn
+{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+  margin: -15px;
+}
+.vmbtn {
+  
+  background: #f36565;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  color: black;
+  text-decoration: none;
+  z-index: 3;
+  transition: ease 0.5s;
+}
+
+.vmbtn:hover {
+  transform: scale(1.1);
+}
+
+.vmcard-img {
+  // background: url('./Images/coding_banner.png');
+  z-index: 3;
+background-color: #2d2f33;;
+  filter: blur(28px);
+  -webkit-filter: blur(28px);
+  height: 100%;
+  width: 100%;
+}
+
 // variables
 $lime: #65f3ac;
 $grey: #e2e2e2;
@@ -701,6 +781,7 @@ color:#25262a;
 }
 //mobile friendly code - completed
 // Contact us Section
+
 .contact_us {
   background: $secondary;
   padding: 50px 30px;
@@ -716,6 +797,9 @@ color:#25262a;
     text-align: center;
   }
 
+
+  
+
   .form {
     max-width: 768px;
     margin: 0 auto;
@@ -723,6 +807,9 @@ color:#25262a;
       display: flex;
       flex-direction: column;
     }
+
+
+    
 
     .form_box {
       padding: 15px 30px 20px;
@@ -909,6 +996,12 @@ footer {
 }
 
 @media screen and(min-width: 600px) {
+
+  .vmbttn
+  {
+    font-size: 18px;
+    text-align: center;
+  }
     .our_club .club_navigator{
         display: flex;
         justify-content: space-between;
@@ -916,6 +1009,12 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  
+  .vmbttn
+  {
+    font-size: 20px;
+    text-align: center;
+  }
   .navbar .navbar-nav .nav-link {
     margin-left: 2em !important;
   }
