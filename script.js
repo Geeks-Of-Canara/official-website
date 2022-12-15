@@ -206,3 +206,40 @@ function validateForm(e){
   else console.log("Invalid form")
   submitError.innerHTML= "";
 }
+
+
+var view_more_coding = document.getElementsByClassName("vmcard");
+var vmc = document.getElementsByClassName("view-more");
+var vmclose = document.getElementsByClassName("vmclose");
+
+vmc[0].addEventListener("click", () => {
+  view_more_coding[0].style.display = "flex";
+});
+
+vmc[1].addEventListener("click", () => {
+  view_more_coding[1].style.display = "flex";
+});
+
+vmc[2].addEventListener("click", () => {
+  view_more_coding[2].style.display = "flex";
+});
+
+vmc[3].addEventListener("click", () => {
+  view_more_coding[3].style.display = "flex";
+});
+
+vmclose[0].addEventListener("click", () => {
+view_more_coding[0].style.display = "none";
+});
+
+vmclose[1].addEventListener("click", () => {
+  view_more_coding[1].style.display = "none";
+  });
+
+  vmclose[2].addEventListener("click", () => {
+    view_more_coding[2].style.display = "none";
+    });
+  
+    vmclose[3].addEventListener("click", () => {
+      view_more_coding[3].style.display = "none";
+      });

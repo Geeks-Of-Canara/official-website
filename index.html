@@ -1,437 +1,589 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Geeks Of Canara</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
- 
-  <body>
 
-    <div id="preloader"></div>
-    <!-- Nav bar -->
-    <div class="inauguration-main">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geeks Of Canara</title>
+  <link rel="icon" href="./Images/Icons/GOC_FAV.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div id="preloader"></div>
+  <!-- Nav bar -->
+  <div class="inauguration-main">
       <div class="in_container">
         <button class="inaugurate">Click to Launch</button>
       </div>
     </div>
     <canvas class="confetti" id="canvas"></canvas> 
-    <nav id="nav">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/index.html">GOC </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#our_club">Our Clubs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#goals">Goals</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/events.html">Events</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link link-last" href="/team.html">Team</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- Nav bar end -->
-<!--circle -->
-
-<div class="circlee circlee1"></div>
-      
-
-<!-- circle end -->
-
-<!-- modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-head">
-      <div class="model-title">
-      About us
-      </div>
-      <div><span class="close">&times;</span></div>
-    
-    </div>
-   
-    <hr class="line">
-    <div class="model-description"> 
-      We are an enthusiastic group of ecology and environmental science students and researchers from the University of Edinburgh. We want to replace statistics anxiety and code fear with inspiration and motivation to learn. We believe that coding can be really fun and also understand the importance of quantitative skills for professional development.
-      Over the last four years we have been writing tutorials as well as organising in-person and online workshops. All of our materials are free for people to use and adapt - you can find more information on organising your own workshops or using Coding Club tutorials in your teaching here.
-     </div>
-  </div>
-
-</div>
-
-
-<!-- modal end -->
-    
-    
-      <!--  -->
-      <!-- Hero Section -->
-      <section class="banner">
-        <h1 id="bgtext1">TECHNICAL</h1>
-        <h1 id="bgtext2">CLUB</h1>
-     
-        <div class="grid-container">
-          <div class="content">
-            <div class="banner-title">
-              <h2>Welcome to</h2>
-              <h1 id="type2">Geeks Of Canara</h1>
-            </div>
-          
-            <p>
-              A space to discuss and explore new technologies.
-            </p>
-            <a class="button btn" href="team.html">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              <div
-                >Explore Our Team <img src="./Images/arrow.svg" alt="arrow"
-              /></div>
-            </a>
-          </div>
-          <div class="banner-image"><img src="./Images/hero-illustration.png" alt="Geeks of Canara"></div>
-        </div>
-        <div class="scroll">
-          <a id="scroll-btn" href="#section-2"></a>
-        </div>
-    </section>
-    <!-- Hero Section End -->    
-    <!-- Our clubs Section -->
-    <section class="our_club" id="our_club">
-        <h2 class="our_club_heading">Our Clubs</h2>
-      <div class="underline"></div>
-      <div class="club_container">
-            <div class="club_navigator">
-                <button class="club_button active" id="club_btn_1" data-id="1"><div class="club_name">Coding Club</div><div class="club_icon"><img src="./Images/Icons/coding club.svg" alt="Coding Club"></div><div class="pointer"></div></button>
-                <button class="club_button" id="club_btn_2" data-id="2"><div class="club_name">Design Club</div><div class="club_icon"><img src="./Images/Icons/design club.svg" alt="Design Club"></div><div class="pointer"></div></button>
-                <button class="club_button" id="club_btn_3" data-id="3"><div class="club_name">Geekhub</div><div class="club_icon"><img src="./Images/Icons/geekhub.svg" alt="Geekhub"></div><div class="pointer"></div></button>
-                <button class="club_button" id="club_btn_4" data-id="4"><div class="club_name">Technovation</div><div class="club_icon"><img src="./Images/Icons/technovation.svg" alt="Technovation"></div><div class="pointer"></div></button>
-            </div>
-            <div class="club_info">
-                <div class="card">
-                    <div class="card-img">
-                      <img class="desktop"  src="./Images/coding_banner.png" alt="">
-                      <img class="mobile" src="./Images/coding.png" alt="">
-                    </div>
-                    <div class="card-content">
-                      <div class="card-heading-container">
-
-                          <h3 class="card-heading">
-                              Coding Club
-                            </h3>
-                            <div class="circle">
-                              <img src="./Images/Icons/coding club.svg" alt="Coding Club">
-                            </div>
-                        </div>
-                      <p class="card-description">
-                        The Coding Club is an educational group dedicated to providing a safe and supportive environment in which individuals of any age and skill level can learn the basics of coding and computer programming. We provide courses, workshops, and resources to help members explore coding and develop their coding skills. We also host events and activities to foster collaboration and networking among our members. Our goal is to cultivate a community of coders, both new and experienced, who can learn, share, and inspire each other to achieve their coding goals.
-                      </p>
-                      <button class="view-more">View More</button>
-                    </div>
-                  </div>
-                <div class="card">
-                    <div class="card-img">
-                      <img class="desktop"  src="./Images/design_banner.png" alt="">
-                      <img class="mobile" src="./Images/design.png" alt="">
-                    </div>
-                    <div class="card-content">
-                      <div class="card-heading-container">
-
-                          <h3 class="card-heading">
-                              Design Club
-                            </h3>
-                            <div class="circle">
-                              <img src="./Images/Icons/design club.svg" alt="Design Club">
-                            </div>
-                        </div>
-                      <p class="card-description">
-                        Design Club is a space for creative minds to come together and collaborate on design projects. This club provides members with the opportunity to learn about design principles, explore the creative process, discuss new trends, and network with other like-minded individuals. Through activities such as workshops, guest lectures, design challenges, and portfolio reviews, members will develop their design skills and gain insight into the world of design. This club is open to all levels and backgrounds, so no matter your experience, you can find a place to contribute your ideas and learn from the collective knowledge of the group.
-                      </p>
-                      <button class="view-more">View More</button>
-                    </div>
-                  </div>
-                <div class="card">
-                    <div class="card-img">
-                      <img class="desktop"  src="./Images/geekhub_banner.png" alt="">
-                      <img class="mobile" src="./Images/geekhub.png" alt="">
-                    </div>
-                    <div class="card-content">
-                      <div class="card-heading-container">
-
-                          <h3 class="card-heading">
-                              Geekhub
-                            </h3>
-                            <div class="circle">
-                              <img src="./Images/Icons/geekhub.svg" alt="Geekhub">
-                            </div>
-                        </div>
-                      <p class="card-description">
-                        The GeekHUB is a community club that aims at more student engagement, increased group knowledge sharing, inspiration for new projects and peers, constant self-improvement and mostly importantly to have FUN!
-                      </p>
-                      <button class="view-more">View More</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                      <img class="desktop"  src="./Images/technovation_banner.png" alt="">
-                      <img class="mobile" src="./Images/technovation.png" alt="">
-                    </div>
-                    <div class="card-content">
-                      <div class="card-heading-container">
-
-                          <h3 class="card-heading">
-                              Technovation
-                            </h3>
-                            <div class="circle">
-                              <img src="./Images/Icons/technovation.svg" alt="Technovation">
-                            </div>
-                        </div>
-                      <p class="card-description">
-                        The Technovation Club is a welcoming environment where technovates will learn about the most recent technological advancements,
- by offering a range of engaging seminars and hands-on learning opportunities.
- The interest in learning is the sole prerequisite for joining the group.
-                      
-                      </p>
-                      <button class="view-more">View More</button>
-                    </div>
-                </div>
-                  
-
-            </div>
-
-      </div>
-    </section>
-
-    <!-- What We Do Section -->
-    <section class="what_we_do" id="goals">
-      <div class="wwd_heading">
-        <!-- circles -->
-    <div class="circlee circlee2"></div>
-    <div class="circlee circlee3"></div>
-    <!-- ******************* -->
-      
-      
-            <h2 class="wwd_heading">What we do?</h2>
-            <div class="underline"></div>
-        </div>
-         <div class="whatwedo_container">
-    
-  
-            <div class="card gs_reveal_fromLeft gs_reveal">
-                <div class="card-content">
-                    <div class="card-heading-container">
-                        <h3 class="card-heading">
-                            Workshops
-                        </h3>
-                        <div class="circle"><img src="./Images/Icons/workshops.svg" alt="Workshops"></div>
-                    </div>
-                    <div class="card-description">
-                      Interactive learning events designed to provide hands-on experience in a specific subject.
-                    </div>
-                </div>
-            </div>
-            <div class="card gs_reveal_fromLeft gs_reveal">
-                <div class="card-content">
-                    <div class="card-heading-container">
-                        <h3 class="card-heading">
-                          Hackathons
-                        </h3>
-                        <div class="circle"><img src="./Images/Icons/hackathon.svg" alt="Hackathons"></div>
-                    </div>
-                    <div class="card-description">
-                      Creative minds come together to develop innovative solutions to challenging problems.
-                    </div>
-                </div>
-            </div>
-            <div class="card gs_reveal_fromLeft gs_reveal">
-                <div class="card-content">
-                    <div class="card-heading-container">
-                        <h3 class="card-heading">
-                            Projects
-                        </h3>
-                        <div class="circle"><img src="./Images/Icons/workshops.svg" alt="Projects"></div>
-                    </div>
-                    <div class="card-description">
-                        Working on real world projects to gain practical experience and enhance technical skills.
-                    </div>
-                </div>
-            </div>
-            <div class="card gs_reveal_fromLeft gs_reveal">
-                <div class="card-content">
-                    <div class="card-heading-container">
-                        <h3 class="card-heading">
-                            Peer Learning
-                        </h3>
-                        <div class="circle"><img src="./Images/Icons/workshops.svg" alt="Peer Learning"></div>
-                    </div>
-                    <div class="card-description">
-                      Engage in the learning process and collaboration by participating in real world projects
-                    </div>
-                </div>
-            </div>
-            <div class="card gs_reveal_fromLeft gs_reveal">
-                <div class="card-content">
-                    <div class="card-heading-container">
-                        <h3 class="card-heading">
-                            Mentorship
-                        </h3>
-                        <div class="circle"><img src="./Images/Icons/workshops.svg" alt="Mentorship"></div>
-                    </div>
-                    <div class="card-description">
-                      Sharing of knowledge, experience with peers to help them develop their skills and reach their goals.
-                    </div>
-                </div>
-            </div>
-            <div class="card gs_reveal_fromLeft gs_reveal">
-                <div class="card-content">
-                    <div class="card-heading-container">
-                        <h3 class="card-heading">
-                            Contests
-                        </h3>
-                        <div class="circle"><img src="./Images/Icons/workshops.svg" alt="Contents"></div>
-                    </div>
-                    <div class="card-description">
-                      Platform to compete with peers in various contests to get motivation and strive for excellence.
-                    </div>
-                </div>
-            </div>
-         </div>
-            
-    </section>
-
-
-    <!-- Contact us Section -->
-    <section class="contact_us">
-      <h2 class="contact_heading">Contact Us</h2>
-      <div class="underline"></div>
-      <form action="" method="" class="form" autocomplete="off">
-        <div class="form_group gs_reveal_fromBottom gs_reveal">
-            <div class="form_box">
-                <label for="name">Name</label><br />
-                <input type="text" class="input" id="name" placeholder=" Your name" onkeyup="validateName()"/>
-                <span class="input-error" id="name-error"></span>
-            </div>
-            <div class="form_box">
-                <label for="email">Email</label><br />
-                <input type="email" class="input" id="email" placeholder=" Your email" onkeyup="validateEmail()"/>
-                <span class="input-error" id="email-error"></span>
-            </div>
-        </div>
-        <div class="form_box gs_reveal_fromBottom gs_reveal">
-            <label for="subject">Subject</label><br />
-            <input type="text" class="input" id="subject" placeholder=" Eg. Club Registration" onkeyup="validateSubject()"/>
-            <span class="input-error" id="subject-error"></span>
-        </div>
-        <div class="form_box gs_reveal_fromBottom gs_reveal">
-            <label for="message">Message</label><br />
-            <textarea name="message" class="input" id="message" rows="5" placeholder=" Type something here..." onkeyup="validateMessage()"></textarea>
-            <span class="input-error" id="message-error"></span>
-        </div>
-        <span class="input-error" id="submit-error"></span>
-        <button class="submit button gs_reveal_fromBottom gs_reveal" onclick="validateForm(event)" id="submit" >
-      <span
-        >Send the Message<img src="./Images/arrow.svg" class="arrow" alt="arrow"
-      /></span>
-    </button>
-    </form>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-      <div class="social_link">
-        <a href="#" class="sm_container">
-          <div><img src="./Images/instagram.svg" alt="Instagram" /></div>
-        </a href="#">
-        <a href="#" class="sm_container">
-          <div><img src="./Images/facebook.svg" alt="Facebook" /></div>
-        </a href="#">
-        <a href="#" class="sm_container">
-          <div><img src="./Images/linkedin.svg" alt="LinkedIn" /></div>
-        </a href="#">
-        <a href="#" class="sm_container">
-          <div><img src="./Images/email.svg" alt="Gmail" /></div>
-        </a href="#">
-      </div>
-      <div class="nav_links">
-        <ul>
-          <li><a href="#" class="first_link">Home</a></li>
-          <li><a href="#our_club">Clubs</a></li>
-          <li><a href="#goals">Goals</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="/team.html" class="last_link">Team</a></li>
+  <nav id="nav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/index.html">GOC </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#our_club">Our Clubs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#goals">Goals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-last" href="/team.html">Team</a>
+          </li>
         </ul>
       </div>
-      <div class="copyright">
-        <p><span>&copy;</span> GeeksofCanara <span>2022</span><span> ~ </span><a href="/developers.html"  class="meet">Meet The Team</a></p>
-    
+    </div>
+  </nav>
+  <!-- Nav bar end -->
+  <!--circle -->
+
+  <div class="circlee circlee1"></div>
+
+
+  <!-- circle end -->
+
+  <!-- modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-head">
+        <div class="model-title">
+          About us
+        </div>
+        <div><span class="close">&times;</span></div>
+
       </div>
-      
-    </footer>
-    <!-- typewriter start -->
-    
-    <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
-    <!-- typewriter end -->
+      <hr class="line">
+      <div class="model-description">
+        We are an enthusiastic group of ecology and environmental science students and researchers from the University
+        of Edinburgh. We want to replace statistics anxiety and code fear with inspiration and motivation to learn. We
+        believe that coding can be really fun and also understand the importance of quantitative skills for professional
+        development.
+        Over the last four years we have been writing tutorials as well as organising in-person and online workshops.
+        All of our materials are free for people to use and adapt - you can find more information on organising your own
+        workshops or using Coding Club tutorials in your teaching here.
+      </div>
+    </div>
 
-    <script>
-      pre = document.getElementById('preloader');
-     
-      setTimeout(function () {
-        document.getElementById('nav').className = 'navbar navbar-expand-lg navbar-light bg-light sticky-top'
-          pre.style.display = 'none';
-          document.querySelector('.inauguration-main').style.display = 'flex';
-      }, 4300)
-  
+  </div>
+
+
+  <!-- modal end -->
+
+
+  <!--  -->
+  <!-- Hero Section -->
+  <section class="banner">
+    <h1 id="bgtext1">TECHNICAL</h1>
+    <h1 id="bgtext2">CLUB</h1>
+
+    <div class="grid-container">
+      <div class="content">
+        <div class="banner-title">
+          <h2>Welcome to</h2>
+          <h1 id="type2">Geeks Of Canara</h1>
+        </div>
+
+        <p>
+          We are a Technical club of CEC aiming at Realizing the idea and
+          Inspiring the next!
+        </p>
+        <a class="button btn" href="team.html">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <div>Explore Our Team <img src="./Images/arrow.svg" alt="arrow" /></div>
+        </a>
+      </div>
+      <div class="banner-image"><img src="./Images/hero-illustration.png" alt="Geeks of Canara"></div>
+    </div>
+    <div class="scroll">
+      <a id="scroll-btn" href="#section-2"></a>
+    </div>
+  </section>
+  <!-- Hero Section End -->
+  <!-- Our clubs Section -->
+  <section class="our_club" id="our_club">
+
+    <h2 class="our_club_heading">Our Clubs</h2>
+    <div class="underline"></div>
+
+    <div class="club_container">
+      <!-- coding card -->
+      <div class="vmcard view-more-coding">
+        <!-- <img src="./Images/coding_banner.png" alt="" srcset=""> -->
+        <div class="vmcard-img">
+        </div>
+
+        <!-- coding card -->
+        <div class="vmcard-body">
+
+
+          <h1 class="vmcard-title">Coding Club</h1>
+
+
+
+          <p class="vmcard-text">Coding Club is an organization that provides a fun and exciting way to learn coding
+            and other computer-related skills. It offers a wide range of activities, including weekly coding
+            classes, hackathons, workshops, and other coding-related events. Participants learn to code using
+            various programming languages and frameworks, while also having the opportunity to collaborate with
+            other coders and develop their own projects. Coding Club is open to all skill levels and provides a
+            safe and welcoming environment for everyone to learn and create.</p>
+          <div class="vmbttn">
+            <button href="#" class="vmbtn vmclose">Close</button>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+
+
+      <!-- design card -->
+      <div class="vmcard view-more-coding">
+        <!-- <img src="./Images/coding_banner.png" alt="" srcset=""> -->
+        <div class="vmcard-img">
+        </div>
+
+
+        <div class="vmcard-body">
+
+
+          <h1 class="vmcard-title">Design Club</h1>
+
+
+
+          <p class="vmcard-text">Design Club is an organization for those interested in exploring the practice of
+            design. Through hands-on activities, workshops, lectures, and field trips, members have the opportunity to
+            develop and use their creative problem-solving skills. Design Club encourages members to think critically
+            and innovatively, and to create solutions to everyday problems. In doing so, members gain a deeper
+            understanding of the world around them. Design Club also serves as a platform for members to collaborate,
+            network, and share their ideas and expertise.</p>
+          <div class="vmbttn">
+            <button href="#" class="vmbtn vmclose">Close</button>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+      <!-- geekhub card -->
+      <div class="vmcard view-more-coding">
+        <!-- <img src="./Images/coding_banner.png" alt="" srcset=""> -->
+        <div class="vmcard-img">
+        </div>
+
+
+        <div class="vmcard-body">
+
+
+          <h1 class="vmcard-title">Geekhub</h1>
+
+
+
+          <p class="vmcard-text">
+
+            Geekhub is an online community for people from all walks of life who are passionate about technology and
+            innovation. The community is a place to share knowledge, collaborate on projects, and network with
+            like-minded individuals. It provides a platform for members to share their ideas, ask questions, and find
+            answers to their tech-related problems. Geekhub also offers technical support, job postings, and other
+            resources to help members get the most out of their technology. The community is a great way to stay
+            connected with the tech community and stay up-to-date on the latest trends and developments.
+          </p>
+          <div class="vmbttn">
+            <button href="#" class="vmbtn vmclose">Close</button>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+
+      <!-- technovation card -->
+      <div class="vmcard view-more-coding">
+        <!-- <img src="./Images/coding_banner.png" alt="" srcset=""> -->
+        <div class="vmcard-img">
+        </div>
+
+
+        <div class="vmcard-body">
+
+
+          <h1 class="vmcard-title">Technovation Club</h1>
+
+
+
+          <p class="vmcard-text">Our goal is to provide technovates with the latest technology and trends. Students will
+            learn about technology through our club, opening up prospects for the future. This is accomplished by the
+            club presenting a variety of interactive seminars and engaging hands-on learning experiences. It even
+            provides the chance to design products and provides instructions for doing so.
+
+            The club consists of self-motivated students, who want to learn, share, and grow. There is only one
+            requirement for joining this club, i.e., INTEREST IN LEARNING.
+          </p>
+          <div class="vmbttn">
+            <button href="#" class="vmbtn vmclose">Close</button>
+          </div>
+        </div>
+
+
+
+
+      </div>
+      <div class="club_navigator">
+        <button class="club_button active" id="club_btn_1" data-id="1">
+          <div class="club_name">Coding Club</div>
+          <div class="club_icon"><img src="./Images/Icons/coding club.svg" alt="Coding Club"></div>
+          <div class="pointer"></div>
+        </button>
+        <button class="club_button" id="club_btn_2" data-id="2">
+          <div class="club_name">Design Club</div>
+          <div class="club_icon"><img src="./Images/Icons/design club.svg" alt="Design Club"></div>
+          <div class="pointer"></div>
+        </button>
+        <button class="club_button" id="club_btn_3" data-id="3">
+          <div class="club_name">Geekhub</div>
+          <div class="club_icon"><img src="./Images/Icons/geekhub.svg" alt="Geekhub"></div>
+          <div class="pointer"></div>
+        </button>
+        <button class="club_button" id="club_btn_4" data-id="4">
+          <div class="club_name">Technovation</div>
+          <div class="club_icon"><img src="./Images/Icons/technovation.svg" alt="Technovation"></div>
+          <div class="pointer"></div>
+        </button>
+      </div>
+
+      <div class="club_info">
+
+        <div class="card">
+          <div class="card-img">
+            <img src="./Images/coding_banner.png" alt="">
+          </div>
+
+          <div class="card-content">
+            <div class="card-heading-container">
+
+              <h3 class="card-heading">
+                Coding Club
+              </h3>
+              <div class="circle">
+                <img src="./Images/Icons/coding club.svg" alt="Coding Club">
+              </div>
+            </div>
+            <p class="card-description">
+              My attractive, functional and easy to use UX/UI will attract your users attract your users
+              My attractive, functional and easy to use UX/UI will attract your users attract your users
+              My attractive, functional and easy to use UX/UI will attract your users attract your users
+              My attractive, functional and easy to use UX/UI will attract your users attract your users
+            </p>
+            <button class="view-more vmc">View More</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="./Images/design_banner.png" alt="">
+          </div>
+          <div class="card-content">
+            <div class="card-heading-container">
+
+              <h3 class="card-heading">
+                Design Club
+              </h3>
+              <div class="circle">
+                <img src="./Images/Icons/design club.svg" alt="Design Club">
+              </div>
+            </div>
+            <p class="card-description">
+              My attractive, functional and easy to use UX/UI will attract your users attract your users
+              My attractive, functional and easy to use UX/UI will attract your users attract your users
+              My attractive, functional and easy to use UX/UI will attract your users attract your users
+              My attractive, functional and easy to use UX/UI will attract your users attract your users
+            </p>
+            <button class="view-more">View More</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="./Images/geekhub_banner.png" alt="">
+          </div>
+          <div class="card-content">
+            <div class="card-heading-container">
+
+              <h3 class="card-heading">
+                Geekhub
+              </h3>
+              <div class="circle">
+                <img src="./Images/Icons/geekhub.svg" alt="Geekhub">
+              </div>
+            </div>
+            <p class="card-description">
+              My attractive, functional and easy to use UX/UI will attract your users attract your users
+              My attractive, functional and easy to use UX/UI will attract your users attract your users
+              My attractive, functional and easy to use UX/UI will attract your users attract your users
+              My attractive, functional and easy to use UX/UI will attract your users attract your users
+            </p>
+            <button class="view-more">View More</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <img src="./Images/technovation_banner.png" alt="">
+          </div>
+          <div class="card-content">
+            <div class="card-heading-container">
+
+              <h3 class="card-heading">
+                Technovation
+              </h3>
+              <div class="circle">
+                <img src="./Images/Icons/technovation.svg" alt="Technovation">
+              </div>
+            </div>
+            <p class="card-description">
+              My attractive, functional and easy to use UX/UI will attract your users attract your users
+              My attractive, functional and easy to use UX/UI will attract your users attract your users
+              My attractive, functional and easy to use UX/UI will attract your users attract your users
+              My attractive, functional and easy to use UX/UI will attract your users attract your users
+
+            </p>
+            <button class="view-more">View More</button>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- What We Do Section -->
+  <section class="what_we_do" id="goals">
+    <div class="wwd_heading">
+      <!-- circles -->
+      <div class="circlee circlee2"></div>
+      <div class="circlee circlee3"></div>
+      <!-- ******************* -->
+
+
+      <h2 class="wwd_heading">What we do?</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="whatwedo_container">
+
+
+      <div class="card gs_reveal_fromLeft gs_reveal">
+        <div class="card-content">
+          <div class="card-heading-container">
+            <h3 class="card-heading">
+              Workshops
+            </h3>
+            <div class="circle"><img src="./Images/Icons/workshops.svg" alt="Workshops"></div>
+          </div>
+          <div class="card-description">
+            Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Molestias culpa soluta corporis.
+          </div>
+        </div>
+      </div>
+      <div class="card gs_reveal_fromLeft gs_reveal">
+        <div class="card-content">
+          <div class="card-heading-container">
+            <h3 class="card-heading">
+              Hackathons
+            </h3>
+            <div class="circle"><img src="./Images/Icons/hackathon.svg" alt="Competitions"></div>
+          </div>
+          <div class="card-description">
+            Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Molestias culpa soluta corporis.
+          </div>
+        </div>
+      </div>
+      <div class="card gs_reveal_fromLeft gs_reveal">
+        <div class="card-content">
+          <div class="card-heading-container">
+            <h3 class="card-heading">
+              Projects
+            </h3>
+            <div class="circle"><img src="./Images/Icons/workshops.svg" alt="Workshops"></div>
+          </div>
+          <div class="card-description">
+            Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Molestias culpa soluta corporis.
+          </div>
+        </div>
+      </div>
+      <div class="card gs_reveal_fromLeft gs_reveal">
+        <div class="card-content">
+          <div class="card-heading-container">
+            <h3 class="card-heading">
+              Peer Learning
+            </h3>
+            <div class="circle"><img src="./Images/Icons/workshops.svg" alt="Workshops"></div>
+          </div>
+          <div class="card-description">
+            Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Molestias culpa soluta corporis.
+          </div>
+        </div>
+      </div>
+      <div class="card gs_reveal_fromLeft gs_reveal">
+        <div class="card-content">
+          <div class="card-heading-container">
+            <h3 class="card-heading">
+              Mentorship
+            </h3>
+            <div class="circle"><img src="./Images/Icons/workshops.svg" alt="Workshops"></div>
+          </div>
+          <div class="card-description">
+            Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Molestias culpa soluta corporis.
+          </div>
+        </div>
+      </div>
+      <div class="card gs_reveal_fromLeft gs_reveal">
+        <div class="card-content">
+          <div class="card-heading-container">
+            <h3 class="card-heading">
+              Contents
+            </h3>
+            <div class="circle"><img src="./Images/Icons/workshops.svg" alt="Workshops"></div>
+          </div>
+          <div class="card-description">
+            Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Molestias culpa soluta corporis.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Contact us Section -->
+  <section class="contact_us">
+    <h2 class="contact_heading">Contact Us</h2>
+    <div class="underline"></div>
+    <form action="" method="" class="form" autocomplete="off">
+      <div class="form_group gs_reveal_fromBottom gs_reveal">
+        <div class="form_box">
+          <label for="name">Name</label><br />
+          <input type="text" class="input" id="name" placeholder=" Your name" onkeyup="validateName()" />
+          <span class="input-error" id="name-error"></span>
+        </div>
+        <div class="form_box">
+          <label for="email">Email</label><br />
+          <input type="email" class="input" id="email" placeholder=" Your email" onkeyup="validateEmail()" />
+          <span class="input-error" id="email-error"></span>
+        </div>
+      </div>
+      <div class="form_box gs_reveal_fromBottom gs_reveal">
+        <label for="subject">Subject</label><br />
+        <input type="text" class="input" id="subject" placeholder=" Eg. Club Registration"
+          onkeyup="validateSubject()" />
+        <span class="input-error" id="subject-error"></span>
+      </div>
+      <div class="form_box gs_reveal_fromBottom gs_reveal">
+        <label for="message">Message</label><br />
+        <textarea name="message" class="input" id="message" rows="5" placeholder=" Type something here..."
+          onkeyup="validateMessage()"></textarea>
+        <span class="input-error" id="message-error"></span>
+      </div>
+      <span class="input-error" id="submit-error"></span>
+      <button class="submit button gs_reveal_fromBottom gs_reveal" onclick="validateForm(event)" id="submit">
+        <span>Send the Message<img src="./Images/arrow.svg" class="arrow" alt="arrow" /></span>
+      </button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="social_link">
+      <a href="#" class="sm_container">
+        <div><img src="./Images/instagram.svg" alt="Instagram" /></div>
+      </a href="#">
+      <a href="#" class="sm_container">
+        <div><img src="./Images/facebook.svg" alt="Facebook" /></div>
+      </a href="#">
+      <a href="#" class="sm_container">
+        <div><img src="./Images/linkedin.svg" alt="LinkedIn" /></div>
+      </a href="#">
+      <a href="#" class="sm_container">
+        <div><img src="./Images/email.svg" alt="Gmail" /></div>
+      </a href="#">
+    </div>
+    <div class="nav_links">
+      <ul>
+        <li><a href="#" class="first_link">Home</a></li>
+        <li><a href="#our_club">Clubs</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="/team.html" class="last_link">Team</a></li>
+      </ul>
+    </div>
+    <div class="copyright">
+      <p><span>&copy;</span> GeeksofCanara <span>2022</span><span> ~ </span><a href="/developers.html" class="meet">Meet
+          The Team</a></p>
+
+    </div>
+
+  </footer>
+  <!-- typewriter start -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
   </script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
-        <script src="./script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-    </script>
-    <script src="scrolltrigger.js"></script>
-    <script src="d3.js"></script>
-    <script src="confetti.js"></script>
-  </body>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+  <!-- typewriter end -->
+
+  <script>
+    pre = document.getElementById('preloader');
+
+    setTimeout(function () {
+      document.getElementById('nav').className = 'navbar navbar-expand-lg navbar-light bg-light sticky-top'
+      pre.style.display = 'none';
+      document.querySelector('.inauguration-main').style.display = 'flex';
+    }, 4300)
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+  <script src="./script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  </script>
+  <script src="scrolltrigger.js"></script>
+  <script src="d3.js"></script>
+  <script src="confetti.js"></script>
+</body>
+
 </html>
